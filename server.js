@@ -2,7 +2,9 @@ const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
 //const { OpenAI } = require('openai');
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config(); // Solo en desarrollo
+}
 
 const app = express();
 app.use(express.json());
