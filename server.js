@@ -80,7 +80,7 @@ async function sendProductosMenu(phone) {
     mensaje += `*${numero}.* ${product.nombre}\n`;
   });
 
-  mensaje += `\n0. Volver al menú principal`;
+  mensaje += `\n*0.* Volver al menú principal`;
 
   // Enviamos el mensaje perfectamente formateado
   await sendMessage(phone, mensaje.trim());
@@ -124,7 +124,7 @@ function getProductById(targetId){
 async function sendVideo(phone, mediaId, caption = "") {
     if(mediaId === '' || mediaId === null){
         await sendMessage(phone, 
-            `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre la aplicación de ${productSelected.nombre}`);
+            `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre la aplicación de ${productSelected[phone].nombre}`);
     } else {
         try {
           await axios.post(
@@ -156,7 +156,7 @@ async function sendVideo(phone, mediaId, caption = "") {
 async function sendPDF(phone, mediaId, filename, caption = "") {
     if(mediaId === '' || mediaId === null){
         await sendMessage(phone, 
-            `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre ${productSelected.nombre}`);
+            `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre ${productSelected[phone].nombre}`);
     } else {
         try {
           await axios.post(
@@ -214,12 +214,12 @@ app.post('/webhook', async (req, res) => {
 
     // ——— ESTADO: Dentro de Productos ———
     else if (userState[phone] === "in_productos") {
-        productSelected = getProductById(text);
-        console.log(productSelected);
+        productSelected[phone] = getProductById(text);
+        console.log(productSelected[phone]);
         if(text === "0"){
             await sendMainMenu(phone);
-        } else if(productSelected !== undefined) {
-            await sendProductoSeleccionadoMenu(phone, productSelected);
+        } else if(productSelected[phone] !== undefined) {
+            await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
         } else {
             await sendMessage(phone, "Responde con el numero del producto o 0 para volver ");
         }
@@ -228,22 +228,22 @@ app.post('/webhook', async (req, res) => {
     // ——— ESTADO: Dentro de producto seleccionado ———
     else if (userState[phone] === "in_producto_seleccionado") {
       if (text === "1") {
-        await sendVideo(phone, productSelected.mediaVideo, 'Aquí tienes el video paso a paso de como aplicar '+productSelected.nombre);
+        await sendVideo(phone, productSelected[phone].mediaVideo, 'Aquí tienes el video paso a paso de como aplicar '+productSelected[phone].nombre);
         await new Promise(resolve => setTimeout(resolve, 1500));
-        await sendProductoSeleccionadoMenu(phone, productSelected);
+        await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
       } else if (text === "2") {
-        await sendPDF(phone, productSelected.mediaPdf, 'Ficha Tecnica '+productSelected.nombre, 'Aquí tienes la ficha tecnica de '+productSelected.nombre);
-        await sendProductoSeleccionadoMenu(phone, productSelected);
+        await sendPDF(phone, productSelected[phone].mediaPdf, 'Ficha Tecnica '+productSelected[phone].nombre, 'Aquí tienes la ficha tecnica de '+productSelected[phone].nombre);
+        await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
     } else if (text === "3") {
-        if(productSelected.linkWeb === ''){
+        if(productSelected[phone].linkWeb === ''){
             await sendMessage(phone, 
-            `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre ${productSelected.nombre}`);
+            `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre ${productSelected[phone].nombre}`);
         } else {
           await sendMessage(phone, 
-          `Aquí tienes el link con toda la información de ${productSelected.nombre}
-          👉 ${productSelected.linkWeb}`);
+          `Aquí tienes el link con toda la información de ${productSelected[phone].nombre}
+          👉 ${productSelected[phone].linkWeb}`);
         }
-        await sendProductoSeleccionadoMenu(phone, productSelected);
+        await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
       } else if (text === "0") {
         await sendProductosMenu(phone);
       } else {
