@@ -320,6 +320,6 @@ async function sendTemplate(to, templateName, language = "en_US", params = []) {
   );
 }
 
-app.listen(3000, () => {
-  console.log('WhatsApp Automation API running on port 3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Servidor WhatsApp activo");
 });
