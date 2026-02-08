@@ -99,6 +99,7 @@ async function sendProductoSeleccionadoMenu(phone, product) {
 *3.* Información general y beneficios  
 
 *0.* Volver al menú de productos
+*x.* Volver al menú principal
   `.trim());
 }
 
@@ -228,14 +229,14 @@ app.post('/webhook', async (req, res) => {
 
     // ——— ESTADO: Dentro de producto seleccionado ———
     else if (userState[phone] === "in_producto_seleccionado") {
-      if (text === "1") {
+      if (text === "1") {// video
         await sendVideo(phone, productSelected[phone].mediaVideo, 'Aquí tienes el video paso a paso de como aplicar '+productSelected[phone].nombre);
         await new Promise(resolve => setTimeout(resolve, 1500));
         await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
-      } else if (text === "2") {
+      } else if (text === "2") {// pdf
         await sendPDF(phone, productSelected[phone].mediaPdf, 'Ficha Tecnica '+productSelected[phone].nombre, 'Aquí tienes la ficha tecnica de '+productSelected[phone].nombre);
         await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
-    } else if (text === "3") {
+      } else if (text === "3") {// not found
         if(productSelected[phone].linkWeb === ''){
             await sendMessage(phone, 
             `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre ${productSelected[phone].nombre}`);
@@ -247,8 +248,11 @@ app.post('/webhook', async (req, res) => {
         await sendProductoSeleccionadoMenu(phone, productSelected[phone]);
       } else if (text === "0") {
         await sendProductosMenu(phone);
+      } 
+      else if(text.toLowerCase === "x"){
+        await sendMainMenu(phone);
       } else {
-        await sendMessage(phone, "Responde con 1, 2, 3 o 0 para volver ");
+          await sendMessage(phone, "Responde con 1, 2, 3 o 0 para volver ");
       }
     }
 
