@@ -249,7 +249,7 @@ app.post('/webhook', async (req, res) => {
       } else if (text === "0") {
         await sendProductosMenu(phone);
       } 
-      else if(text.toLowerCase === "x"){
+      else if(text.toLowerCase() === "x"){
         await sendMainMenu(phone);
       } else {
           await sendMessage(phone, "Responde con 1, 2, 3 o 0 para volver ");
