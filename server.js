@@ -159,7 +159,7 @@ async function sendPDF(phone, mediaId, filename, caption = "") {
             `Contáctanos a este número https://wa.me/59167978690 para obtener mayor información sobre ${productSelected[phone].nombre}`);
     } else {
         try {
-          console.log(`Video enviado a ${phone}`);
+          console.log(mediaId);
           await axios.post(
             `https://graph.facebook.com/v22.0/${PHONE_NUMBER_ID}/messages`,
             {
