@@ -99,7 +99,7 @@ REGLAS DE COMPORTAMIENTO:
 function buildContextPrompt(context) {
   if (!context) return '';
   const map = {
-    catalogo:  'El usuario quiere ver el catálogo. Muéstrale los productos disponibles con nombres, marcas y usos principales de forma organizada.',
+    catalogo:  'El usuario quiere ver el catálogo. NO listes todos los productos. En cambio, pregúntale qué problema de humedad o filtración tiene o en qué superficie necesita impermeabilizar, y recomiéndale los 2-3 productos más relevantes según su respuesta. Máximo 3 productos a la vez.',
     precios:   'El usuario pregunta por precios estimados. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad para poder darle una referencia más precisa o conectarlo con un asesor si lo necesita. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización.',
     asesoria:  'El usuario tiene una duda técnica o problema de humedad. Pregúntale qué tipo de superficie tiene y qué problema experimenta para recomendarle el producto más adecuado.',
   };
