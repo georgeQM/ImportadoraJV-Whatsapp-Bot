@@ -3,7 +3,8 @@
 const { getAIResponse }                                          = require('../ai/agent');
 const { parseAIResponse }                                        = require('../ai/escalation');
 const { addMessage, getHistory, getSession, upsertSession,
-        markEscalated, deleteHistory, deleteSession }            = require('../db/queries');
+        markEscalated, deleteHistory, deleteSession,
+        setContext, getContext }                                  = require('../db/queries');
 const { sendMessage, sendVideo, sendPDF }                        = require('../whatsapp/send');
 const { getProductById }                                         = require('../whatsapp/media');
 
@@ -71,7 +72,20 @@ async function handle(req, res) {
 
     upsertSession(phone);
 
-    const rawResponse = await getAIResponse(phone, userText, history);
+    const CONTEXT_MAP = { '1': 'catalogo', '2': 'precios', '3': 'asesoria' };
+    if (CONTEXT_MAP[userText]) {
+      const contextVal = CONTEXT_MAP[userText];
+      setContext(phone, contextVal);
+      const rawResponse = await getAIResponse(phone, userText, [], contextVal);
+      const { cleanText } = parseAIResponse(rawResponse);
+      addMessage(phone, 'user', userText);
+      addMessage(phone, 'assistant', cleanText);
+      await sendMessage(phone, cleanText);
+      return;
+    }
+
+    const context = getContext(phone);
+    const rawResponse = await getAIResponse(phone, userText, history, context);
     const { cleanText, shouldEscalate, mediaId } = parseAIResponse(rawResponse);
 
     // Persist conversation
@@ -84,6 +98,7 @@ async function handle(req, res) {
     // Handle escalation signal
     if (shouldEscalate) {
       markEscalated(phone);
+      setContext(phone, null);
       await sendMessage(phone, `👉 https://wa.me/${ESCALATION_NUMBER}`);
     }
 

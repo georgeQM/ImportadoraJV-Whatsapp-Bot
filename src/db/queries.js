@@ -69,6 +69,25 @@ function deleteSession(phone) {
   stmtDeleteSession.run(phone);
 }
 
+// ── context ───────────────────────────────────
+
+const stmtSetContext = db.prepare(
+  'UPDATE sessions SET context = ? WHERE phone = ?'
+);
+
+function setContext(phone, context) {
+  stmtSetContext.run(context, phone);
+}
+
+const stmtGetContext = db.prepare(
+  'SELECT context FROM sessions WHERE phone = ?'
+);
+
+function getContext(phone) {
+  const row = stmtGetContext.get(phone);
+  return row ? row.context : null;
+}
+
 // ── crawl_cache ───────────────────────────────
 
 const stmtGetCachedContent = db.prepare(
@@ -100,6 +119,8 @@ module.exports = {
   markEscalated,
   deleteHistory,
   deleteSession,
+  setContext,
+  getContext,
   getCachedContent,
   upsertCrawlCache,
 };

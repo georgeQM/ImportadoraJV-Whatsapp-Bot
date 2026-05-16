@@ -1,7 +1,7 @@
 'use strict';
 
 const { OpenAI } = require('openai');
-const { buildSystemPrompt } = require('./context');
+const { buildSystemPrompt, buildContextPrompt } = require('./context');
 
 // Instantiated at module load — dotenv must run before server.js requires this
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -12,8 +12,9 @@ const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
  * @param {{ role: string, content: string }[]} history  Prior messages, oldest first
  * @returns {Promise<string>}
  */
-async function getAIResponse(_phone, userMessage, history) {
-  const systemPrompt = buildSystemPrompt();
+async function getAIResponse(_phone, userMessage, history, context = null) {
+  const contextExtra = buildContextPrompt(context);
+  const systemPrompt = buildSystemPrompt() + (contextExtra ? '\n\n' + contextExtra : '');
 
   const messages = [
     { role: 'system', content: systemPrompt },

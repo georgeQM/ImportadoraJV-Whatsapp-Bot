@@ -96,4 +96,14 @@ REGLAS DE COMPORTAMIENTO:
 - Si el usuario responde con solo el número 3, pregúntale cuál es su problema de humedad para poder asesorarlo`;
 }
 
-module.exports = { buildSystemPrompt };
+function buildContextPrompt(context) {
+  if (!context) return '';
+  const map = {
+    catalogo:  'El usuario quiere ver el catálogo. Muéstrale los productos disponibles con nombres, marcas y usos principales de forma organizada.',
+    precios:   'El usuario pregunta por precios estimados. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad para poder darle una referencia más precisa o conectarlo con un asesor si lo necesita. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización.',
+    asesoria:  'El usuario tiene una duda técnica o problema de humedad. Pregúntale qué tipo de superficie tiene y qué problema experimenta para recomendarle el producto más adecuado.',
+  };
+  return map[context] || '';
+}
+
+module.exports = { buildSystemPrompt, buildContextPrompt };

@@ -31,6 +31,10 @@ db.exec(`
   );
 `);
 
+try {
+  db.exec('ALTER TABLE sessions ADD COLUMN context TEXT');
+} catch (_) { /* column already exists */ }
+
 console.log('[db] SQLite initialized at', DB_PATH);
 
 module.exports = db;
