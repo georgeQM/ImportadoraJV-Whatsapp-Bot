@@ -53,6 +53,22 @@ function markEscalated(phone) {
   stmtMarkEscalated.run(phone);
 }
 
+const stmtDeleteHistory = db.prepare(
+  'DELETE FROM conversations WHERE phone = ?'
+);
+
+function deleteHistory(phone) {
+  stmtDeleteHistory.run(phone);
+}
+
+const stmtDeleteSession = db.prepare(
+  'DELETE FROM sessions WHERE phone = ?'
+);
+
+function deleteSession(phone) {
+  stmtDeleteSession.run(phone);
+}
+
 // ── crawl_cache ───────────────────────────────
 
 const stmtGetCachedContent = db.prepare(
@@ -82,6 +98,8 @@ module.exports = {
   getSession,
   upsertSession,
   markEscalated,
+  deleteHistory,
+  deleteSession,
   getCachedContent,
   upsertCrawlCache,
 };

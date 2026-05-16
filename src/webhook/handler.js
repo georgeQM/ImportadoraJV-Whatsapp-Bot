@@ -3,7 +3,7 @@
 const { getAIResponse }                                          = require('../ai/agent');
 const { parseAIResponse }                                        = require('../ai/escalation');
 const { addMessage, getHistory, getSession, upsertSession,
-        markEscalated }                                          = require('../db/queries');
+        markEscalated, deleteHistory, deleteSession }            = require('../db/queries');
 const { sendMessage, sendVideo, sendPDF }                        = require('../whatsapp/send');
 const { getProductById }                                         = require('../whatsapp/media');
 
@@ -30,6 +30,17 @@ async function handle(req, res) {
   console.log(`[webhook] From ${phone}: "${userText}"`);
 
   try {
+    // Reset command — wipe history + session, start fresh
+    if (['reiniciar', 'reset'].includes(userText.toLowerCase())) {
+      deleteHistory(phone);
+      deleteSession(phone);
+      console.log(`[webhook] Reset by ${phone}`);
+      await sendMessage(phone,
+        '✅ Tu conversación ha sido reiniciada. ¡Hola de nuevo! ¿En qué te puedo ayudar?'
+      );
+      return;
+    }
+
     // Load session; compute whether it has expired
     const session = getSession(phone);
     let history = [];
