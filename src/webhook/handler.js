@@ -14,10 +14,10 @@ const SESSION_TIMEOUT_MS  = 24 * 60 * 60 * 1000;
 const WELCOME_MESSAGE =
   '¡Hola! Bienvenido a Importadora JV. 👋\n\n' +
   'Soy tu asesor y estoy aquí para ayudarte.\n\n' +
-  '*1.* Catálogo de productos\n' +
-  '*2.* Precios estimados\n' +
+  '*1.* Buscar un producto\n' +
+  '*2.* Pedir una cotización\n' +
   '*3.* Dudas técnicas o problemas de humedad\n\n' +
-  'Para ver nuestro catalogo e información ingresa a\n' +
+  'Para ver nuestro catalogo completo e información ingresa a\n' +
   '🌐 importadorajv.com\n\n' +
   '¿Con qué te ayudo?';
 

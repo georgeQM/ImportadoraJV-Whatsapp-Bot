@@ -90,17 +90,14 @@ REGLAS DE COMPORTAMIENTO:
 - Si no sabes algo específico, dilo y ofrece conectar con un humano [ESCALATE]
 - Respuestas concisas — esto es WhatsApp, no email
 - Nunca inventes precios ni disponibilidades que no tengas en el catálogo
-- Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar
-- Si el usuario responde con solo el número 1, responde con el catálogo de productos impermeabilizantes disponibles
-- Si el usuario responde con solo el número 2, explica que los precios varían según el producto y cantidad, ofrece conectar con un asesor para una cotización exacta [ESCALATE]
-- Si el usuario responde con solo el número 3, pregúntale cuál es su problema de humedad para poder asesorarlo`;
+- Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar`;
 }
 
 function buildContextPrompt(context) {
   if (!context) return '';
   const map = {
     catalogo:  'El usuario quiere ver el catálogo. NO listes todos los productos. En cambio, pregúntale qué problema de humedad o filtración tiene o en qué superficie necesita impermeabilizar, y recomiéndale los 2-3 productos más relevantes según su respuesta. Máximo 3 productos a la vez.',
-    precios:   'El usuario pregunta por precios estimados. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad para poder darle una referencia más precisa o conectarlo con un asesor si lo necesita. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización.',
+    precios:   'El usuario pregunta por una cotización. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad para poder darle una referencia más precisa o conectarlo con un asesor si lo necesita. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización y sabe que productos y cantidades quiere.',
     asesoria:  'El usuario tiene una duda técnica o problema de humedad. Pregúntale qué tipo de superficie tiene y qué problema experimenta para recomendarle el producto más adecuado.',
   };
   return map[context] || '';
