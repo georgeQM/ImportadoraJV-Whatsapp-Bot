@@ -15,9 +15,41 @@ const FALLBACK_COMPANY_INFO =
 function formatProductCatalog() {
   return catalogo
     .slice()
-    .sort((a, b) => a.id - b.id)
-    .map(p => `[ID:${p.id}] ${p.nombre}: ${p.descripcion}. Más info: ${p.linkWeb || 'N/A'}`)
-    .join('\n');
+    .sort((a, b) => Number(a.id) - Number(b.id))
+    .map(p => {
+      const lines = [];
+
+      lines.push(`[ID:${p.id}] ${p.nombre} (${p.marca})`);
+
+      if (p.superficies?.length)
+        lines.push(`Superficies: ${p.superficies.join(', ')}`);
+
+      if (p.problema?.length)
+        lines.push(`Problemas que resuelve: ${p.problema.join(', ')}`);
+
+      if (p.descripcion)
+        lines.push(`Descripción: ${p.descripcion}`);
+
+      const rendParts = [];
+      const rendVal = p.rendimiento_kg_m2 ?? p.rendimiento_m2_por_unidad;
+      if (rendVal != null) {
+        const unit = p.rendimiento_kg_m2 != null ? 'kg/m²' : 'm²/unidad';
+        rendParts.push(`Rendimiento: ${rendVal} ${unit}`);
+      }
+      if (p.presentaciones?.length)
+        rendParts.push(`Presentaciones: ${p.presentaciones.join(', ')}`);
+      if (rendParts.length)
+        lines.push(rendParts.join('. '));
+
+      if (p.rendimiento_nota)
+        lines.push(`Nota de rendimiento: ${p.rendimiento_nota}`);
+
+      if (p.linkWeb)
+        lines.push(`Más info: ${p.linkWeb}`);
+
+      return lines.join('\n');
+    })
+    .join('\n\n');
 }
 
 function formatCurrentTime() {
