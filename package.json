@@ -1,8 +1,9 @@
 {
   "name": "importadorajv-wpp-api",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "2.0.0",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,8 @@
   "description": "",
   "dependencies": {
     "axios": "^1.13.2",
+    "better-sqlite3": "^9.6.0",
+    "cheerio": "^1.2.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "openai": "^6.9.1",

@@ -36,3 +36,8 @@ coverage/
 # Misc
 *.pid
 *.seed
+
+# SQLite database
+bot.db
+bot.db-wal
+bot.db-shm

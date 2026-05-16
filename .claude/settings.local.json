@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"B:\\\\WorkSpaces\\\\ImportadoraJV\\\\Whatsapp API ImportadoraJV\" -Force)",
+      "Bash(Select-Object Name, Mode)",
+      "Bash(npm list *)",
+      "Bash(npm install *)"
+    ]
+  }
+}
