@@ -58,7 +58,10 @@ REGLAS DE COMPORTAMIENTO:
 - Si no sabes algo específico, dilo y ofrece conectar con un humano [ESCALATE]
 - Respuestas concisas — esto es WhatsApp, no email
 - Nunca inventes precios ni disponibilidades que no tengas en el catálogo
-- Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar`;
+- Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar
+- Si el usuario responde con solo el número 1, responde con el catálogo de productos impermeabilizantes disponibles
+- Si el usuario responde con solo el número 2, explica que los precios varían según el producto y cantidad, ofrece conectar con un asesor para una cotización exacta [ESCALATE]
+- Si el usuario responde con solo el número 3, pregúntale cuál es su problema de humedad para poder asesorarlo`;
 }
 
 module.exports = { buildSystemPrompt };
