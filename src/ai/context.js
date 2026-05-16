@@ -1,8 +1,9 @@
 'use strict';
 
 const { getCachedContent } = require('../db/queries');
-const { getAllProducts } = require('../whatsapp/media');
 const { getHoursMessage, boliviaTime } = require('../utils/hours');
+
+const catalogo = require('../../catalogo.json');
 
 const ESCALATION_NUMBER      = process.env.ESCALATION_NUMBER;
 const ESCALATION_NUMBER_TECH = process.env.ESCALATION_NUMBER_TECH;
@@ -12,7 +13,8 @@ const FALLBACK_COMPANY_INFO =
   'Marcas: Viapol, Viqua, Plasbohn. Ofrecen membranas asfálticas, aditivos, selladores y accesorios de plomería.';
 
 function formatProductCatalog() {
-  return getAllProducts()
+  return catalogo
+    .slice()
     .sort((a, b) => a.id - b.id)
     .map(p => `[ID:${p.id}] ${p.nombre}: ${p.descripcion}. Más info: ${p.linkWeb || 'N/A'}`)
     .join('\n');

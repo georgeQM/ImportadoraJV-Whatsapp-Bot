@@ -10,6 +10,16 @@ const { getProductById }                                         = require('../w
 const ESCALATION_NUMBER   = process.env.ESCALATION_NUMBER;
 const SESSION_TIMEOUT_MS  = 24 * 60 * 60 * 1000;
 
+const WELCOME_MESSAGE =
+  '¡Hola! Bienvenido a Importadora JV. 👋\n\n' +
+  'Soy tu asesor y estoy aquí para ayudarte.\n\n' +
+  '*1.* Catálogo de productos\n' +
+  '*2.* Precios estimados\n' +
+  '*3.* Dudas técnicas o problemas de humedad\n\n' +
+  'Para ver nuestro catalogo e información ingresa a\n' +
+  '🌐 importadorajv.com\n\n' +
+  '¿Con qué te ayudo?';
+
 async function handle(req, res) {
   const body = req.body;
 
@@ -30,29 +40,33 @@ async function handle(req, res) {
   console.log(`[webhook] From ${phone}: "${userText}"`);
 
   try {
-    // Reset command — wipe history + session, start fresh
+    // Reset command — wipe history + session, restart with welcome
     if (['reiniciar', 'reset'].includes(userText.toLowerCase())) {
       deleteHistory(phone);
       deleteSession(phone);
+      upsertSession(phone);
       console.log(`[webhook] Reset by ${phone}`);
-      await sendMessage(phone,
-        '✅ Tu conversación ha sido reiniciada. ¡Hola de nuevo! ¿En qué te puedo ayudar?'
-      );
+      await sendMessage(phone, WELCOME_MESSAGE);
       return;
     }
 
-    // Load session; compute whether it has expired
+    // First contact — no session exists yet
     const session = getSession(phone);
-    let history = [];
+    if (!session) {
+      upsertSession(phone);
+      console.log(`[webhook] First contact from ${phone}`);
+      await sendMessage(phone, WELCOME_MESSAGE);
+      return;
+    }
 
-    if (session) {
-      const lastActive   = new Date(session.last_active.replace(' ', 'T') + 'Z');
-      const elapsed      = Date.now() - lastActive.getTime();
-      if (elapsed <= SESSION_TIMEOUT_MS) {
-        history = getHistory(phone, 20);
-      } else {
-        console.log(`[webhook] Session expired for ${phone} — starting fresh`);
-      }
+    // Session exists — check if expired
+    const lastActive = new Date(session.last_active.replace(' ', 'T') + 'Z');
+    const elapsed    = Date.now() - lastActive.getTime();
+    let history = [];
+    if (elapsed <= SESSION_TIMEOUT_MS) {
+      history = getHistory(phone, 20);
+    } else {
+      console.log(`[webhook] Session expired for ${phone} — starting fresh`);
     }
 
     upsertSession(phone);

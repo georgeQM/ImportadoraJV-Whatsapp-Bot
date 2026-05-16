@@ -1,0 +1,176 @@
+[
+  {
+    "id": "42",
+    "slug": "torodin",
+    "nombre": "Torodin",
+    "descripcion": "Membrana asfáltica de 1,30 m2 de área, con grosores de 3mm y 4mm. Alta resistencia, durabilidad y adherencia. Rinde hasta 10 m2."
+  },
+  {
+    "id": "43",
+    "slug": "vedalage-negro",
+    "nombre": "Vedalage Negro",
+    "descripcion": "Manta líquida lista para usar a base de asfalto modificado con polímeros. Alta elasticidad, flexibilidad y adherencia. Uso: losas, áreas frías (baño, cocina, balcón), muros de contención, jardineras, saunas, canalones."
+  },
+  {
+    "id": "44",
+    "slug": "membrana-asfaltica-autoadesiva-color-aluminio-viaflex-fita",
+    "nombre": "Membrana Asfáltica Autoadhesiva Color Aluminio Viaflex Fita",
+    "descripcion": "Cinta impermeable autoadhesiva con adhesivo asfáltico y lámina de aluminio flexible. Aplicación rápida sin herramientas. Tamaños: 10cm, 15cm, 20cm, 30cm, 45cm, 94cm."
+  },
+  {
+    "id": "45",
+    "slug": "membrana-asfaltica-autoadesiva-color-teja-viaflex-fita",
+    "nombre": "Membrana Asfáltica Autoadhesiva Color Teja Viaflex Fita",
+    "descripcion": "Cinta impermeable autoadhesiva con adhesivo asfáltico y lámina de aluminio flexible, color teja. Aplicación rápida sin herramientas. Tamaños: 10cm, 15cm, 20cm, 30cm, 45cm, 94cm."
+  },
+  {
+    "id": "105",
+    "slug": "ecoprimer",
+    "nombre": "Ecoprimer",
+    "descripcion": "Imprimación para pegado de mantas y cintas asfálticas. Base agua, sin disolventes, bajo VOC. Aplicación en frío sobre hormigón, mortero, mampostería y fibra de vidrio."
+  },
+  {
+    "id": "106",
+    "slug": "contra-humedad",
+    "nombre": "Contra Humedad",
+    "descripcion": "Aditivo mineral impermeabilizante que mezclado con mortero u hormigón actúa por hidrofobicidad de capilares. Uso: piscinas subterráneas, sótanos, pozos, cimientos, muros de contención, tanques enterrados."
+  },
+  {
+    "id": "107",
+    "slug": "viaplus-1000",
+    "nombre": "Viaplus 1000",
+    "descripcion": "Mortero impermeabilizante semiflexible bicomponente (A+B). Resiste hasta 60m de columna de agua, presiones positivas y negativas. Uso: subsuelos, pozos, muros de contención, depósitos de agua potable, piscinas."
+  },
+  {
+    "id": "108",
+    "slug": "viaplus-5000",
+    "nombre": "Viaplus 5000",
+    "descripcion": "Revestimiento impermeabilizante flexible bicomponente con resinas elastoméricas y fibras sintéticas. Uso: depósitos de agua potable, piscinas elevadas. Solo presión hidrostática positiva."
+  },
+  {
+    "id": "109",
+    "slug": "viafix",
+    "nombre": "Viafix",
+    "descripcion": "Emulsión adhesiva PVA de alto rendimiento. Promotor de adhesión para hormigón, morteros y losas. Mayor adhesión, resistencia a la alcalinidad y plasticidad."
+  },
+  {
+    "id": "110",
+    "slug": "vedalage-plus",
+    "nombre": "Vedalage Plus",
+    "descripcion": "Manta líquida de resina acrílica pura. Alta elasticidad, refleja luz solar, resistente a UV. Uso: losas con o sin tráfico, marquesinas, baldosas de fibrocemento, canalones."
+  },
+  {
+    "id": "111",
+    "slug": "sella-grietas",
+    "nombre": "Sella Grietas",
+    "descripcion": "Sellador monocomponente flexible de base acrílica para grietas y fisuras internas y externas. Acepta pintura a base de agua. Uso: paredes Drywall, morteros de fachadas, marcos metálicos y de madera."
+  },
+  {
+    "id": "112",
+    "slug": "viaplus-reparo",
+    "nombre": "Viaplus Reparo",
+    "descripcion": "Impermeabilizante monocomponente blanco para sellado y tratamiento de humedad en paredes. Resistente a humedad ascendente. Aplicación directa sobre revoque, bloques de hormigón y cerámica."
+  },
+  {
+    "id": "113",
+    "slug": "viafoil",
+    "nombre": "ViaFoil",
+    "descripcion": "Film de polietileno con recubrimiento reflectante de aluminio para tejados. Aislamiento térmico y protección impermeable. Inhibe hongos, insectos y roedores."
+  },
+  {
+    "id": "114",
+    "slug": "vandex-super",
+    "nombre": "Vandex Super",
+    "descripcion": "Impermeabilizante cristalizante monocomponente. No tóxico (NSF 61). Resiste presiones positivas y negativas. Sella grietas estáticas hasta 0,4mm. Uso: plantas de tratamiento, cimientos, túneles, presas, aparcamientos subterráneos."
+  },
+  {
+    "id": "115",
+    "slug": "eucorepair-vandex",
+    "nombre": "Eucorepair Vandex",
+    "descripcion": "Mortero de reparación monocomponente con cristalizante incorporado. Espesores de 10mm a 125mm. Uso: juntas de hormigón, reparación de agujeros de tensores, juntas con humedad, hormigón disgregado."
+  },
+  {
+    "id": "116",
+    "slug": "eucon-vandex-am-10",
+    "nombre": "Eucon Vandex AM-10",
+    "descripcion": "Aditivo impermeabilizante cristalizante para hormigón. Reduce o elimina penetración de agua. Sella fisuras estáticas hasta 0,4mm. Uso: alcantarillado, cimientos, túneles, garajes subterráneos."
+  },
+  {
+    "id": "117",
+    "slug": "mantex",
+    "nombre": "Mantex",
+    "descripcion": "Tejido 100% poliéster con recubrimiento PVC para refuerzo de impermeabilizaciones. Compatible con principales impermeabilizantes flexibles. Uso: zonas de mayor tensión como desagües, juntas, esquinas y bordes."
+  },
+  {
+    "id": "118",
+    "slug": "kiesey",
+    "nombre": "Kiesey",
+    "descripcion": "Impermeabilizante líquido por cristalización para bloquear humedad ascendente en mampostería. Sella fisuras superficiales en hormigón. Protege contra cloruros y sulfatos."
+  },
+  {
+    "id": "119",
+    "slug": "po-2",
+    "nombre": "Po 2",
+    "descripcion": "Cemento ultrarrápido para taponamiento de torrentes de agua. Inicio de reacción 7-10 segundos, endurecimiento en 90 segundos. Uso: chorros de agua en pozos, túneles, subsuelos bajo napa freática."
+  },
+  {
+    "id": "120",
+    "slug": "viamix-expande-massa",
+    "nombre": "Viamix Expande Massa",
+    "descripcion": "Aditivo en polvo expansivo para pastas de cemento, morteros y hormigones. Compensa retracción, previene fisuración y aumenta adherencia. Uso: relleno de mampostería, inyecciones en grietas y cimentaciones."
+  },
+  {
+    "id": "121",
+    "slug": "viaplus-7000",
+    "nombre": "Viaplus 7000",
+    "descripcion": "Revestimiento impermeabilizante flexible bicomponente con máximo contenido de fibras sintéticas. Máxima flexibilidad y resistencia al fisuramiento. Uso: tanques, piscinas elevadas, paneles de yeso, baños, cocinas, balcones."
+  },
+  {
+    "id": "122",
+    "slug": "sella-juntas",
+    "nombre": "Sella Juntas",
+    "descripcion": "Sellador de poliuretano monocomponente PU 25 PLUS. Alta capacidad de movimiento, resistente a UV, no amarillea. Uso: juntas de dilatación, fachadas, elementos prefabricados, marcos metálicos y de madera."
+  },
+  {
+    "id": "123",
+    "slug": "viaplus-2000-fibras",
+    "nombre": "Viaplus 2000 Fibras",
+    "descripcion": "Mortero impermeabilizante semiflexible bicomponente con fibras sintéticas. Resiste hasta 60m de columna de agua. Consumo: 3-5 Kg/m². Uso: subsuelos, pozos, muros de contención, piscinas, depósitos de agua potable."
+  },
+  {
+    "id": "124",
+    "slug": "viaplus-6000-fibras",
+    "nombre": "Viaplus 6000 Fibras",
+    "descripcion": "Revestimiento impermeabilizante flexible bicomponente con alto contenido de fibras. Consumo: 3-4,5 Kg/m². Uso: reservorios, piscinas elevadas, losas y áreas húmedas con presión hidrostática positiva."
+  },
+  {
+    "id": "125",
+    "slug": "viaplus-10000-lozas",
+    "nombre": "Viaplus 10.000 Lozas",
+    "descripcion": "Revestimiento impermeabilizante ultra elástico bicomponente con protección UV incorporada. Para losas expuestas a la intemperie. Consumo: 3-4,5 Kg/m²."
+  },
+  {
+    "id": "126",
+    "slug": "dymonic-100",
+    "nombre": "Dymonic 100",
+    "descripcion": "Sellador de poliuretano de alto desempeño. Se adhiere a concreto con humedad o fresco. Sachet 600ml. Rinde 16,6m para junta de 6x6mm."
+  },
+  {
+    "id": "127",
+    "slug": "plastol",
+    "nombre": "Plastol",
+    "descripcion": "Aditivo superplastificante de fraguado normal para hormigón. Mejora fluidez y trabajabilidad, reduce consumo de cemento. Consumo: 0,1% a 1,5% del peso del cemento."
+  },
+  {
+    "id": "128",
+    "slug": "plastoflow",
+    "nombre": "Plastoflow",
+    "descripcion": "Aditivo superplastificante de larga manutención para hormigón. Mantiene alta trabajabilidad por más tiempo. Consumo: 0,2% a 1,8% del peso del cemento."
+  },
+  {
+    "id": "129",
+    "slug": "viabit-acqua-antiraiz",
+    "nombre": "Viabit Acqua Antiraiz",
+    "descripcion": "Pintura impermeabilizante base agua con aditivo anti-raíces. Alta adherencia y rápido secado. Balde 18 Kg / Galón 3,6 Kg. Consumo: 0,4 l/m²."
+  }
+]
