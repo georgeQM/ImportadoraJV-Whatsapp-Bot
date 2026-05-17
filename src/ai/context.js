@@ -2,14 +2,12 @@
 
 const { getHoursMessage, boliviaTime } = require('../utils/hours');
 
-const catalogo = require('../../catalogo.json');
 
 const ESCALATION_NUMBER      = process.env.ESCALATION_NUMBER;
 const ESCALATION_NUMBER_TECH = process.env.ESCALATION_NUMBER_TECH;
 
-
-function formatProductCatalog() {
-  return catalogo
+function formatProductCatalog(products = null) {
+  return products
     .slice()
     .sort((a, b) => Number(a.id) - Number(b.id))
     .map(p => {
@@ -22,6 +20,12 @@ function formatProductCatalog() {
 
       if (p.problema?.length)
         lines.push(`Problemas que resuelve: ${p.problema.join(', ')}`);
+
+      if (p.ubicacion?.length)
+        lines.push(`Ubicación: ${p.ubicacion.join(', ')}`);
+
+      if (p.tipo?.length)
+        lines.push(`Tipo: ${p.tipo.join(', ')}`);
 
       if (p.descripcion)
         lines.push(`Descripción: ${p.descripcion}`);
@@ -59,10 +63,13 @@ function formatCurrentTime() {
   return `${now.getDate()} de ${months[now.getMonth()]}, ${pad(now.getHours())}:${pad(now.getMinutes())}`;
 }
 
-function buildSystemPrompt() {
-  const productCatalog = formatProductCatalog();
-  const currentTime    = formatCurrentTime();
-  const hoursMessage   = getHoursMessage();
+function buildSystemPromptWith(products = null) {
+  const currentTime  = formatCurrentTime();
+  const hoursMessage = getHoursMessage();
+
+  const catalogSection = products
+    ? `CATÁLOGO DE PRODUCTOS:\n${formatProductCatalog(products)}`
+    : 'Para recomendar productos específicos, el sistema de menús guiará al usuario a seleccionar su categoría y área de interés. No listes productos hasta que el usuario haya seleccionado una categoría.';
 
   return `Eres el asistente virtual de Importadora JV, una empresa boliviana especializada en productos impermeabilizantes y accesorios de plomería.
 
@@ -70,8 +77,7 @@ Responde en español, de forma natural y profesional. No reveles que eres una IA
 
 Importadora JV es distribuidora oficial de Viapol, Viqua y Plasbohn en Bolivia. Vende productos impermeabilizantes, grifería y accesorios de plomería.
 
-CATÁLOGO DE PRODUCTOS:
-${productCatalog}
+${catalogSection}
 
 CONTACTO Y ESCALAMIENTO:
 - Para pedidos, cotizaciones o cuando el usuario necesite un humano: +${ESCALATION_NUMBER}
@@ -90,14 +96,27 @@ REGLAS DE COMPORTAMIENTO:
 - Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar`;
 }
 
-function buildContextPrompt(context) {
-  if (!context) return '';
-  const map = {
-    catalogo:  'El usuario quiere ver el catálogo. NO listes todos los productos. En cambio, pregúntale qué problema de humedad o filtración tiene o en qué superficie necesita impermeabilizar, y recomiéndale los 2-3 productos más relevantes según su respuesta. Máximo 3 productos a la vez.',
-    precios:   'El usuario pregunta por una cotización. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad para poder darle una referencia más precisa o conectarlo con un asesor si lo necesita. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización y sabe que productos y cantidades quiere.',
-    asesoria:  'El usuario tiene una duda técnica o problema de humedad. Pregúntale qué tipo de superficie tiene y qué problema experimenta para recomendarle el producto más adecuado.',
-  };
-  return map[context] || '';
+function buildSystemPrompt() {
+  return buildSystemPromptWith(null);
 }
 
-module.exports = { buildSystemPrompt, buildContextPrompt };
+function buildFocusedPrompt(products) {
+  return buildSystemPromptWith(products);
+}
+
+function buildClarifyingPrompt(contextObj) {
+  if (!contextObj) return '';
+  const { intent, surfaceId, locationId } =
+    (typeof contextObj === 'object') ? contextObj : { intent: contextObj };
+  const hasSubFilter = !!(surfaceId || locationId);
+  const map = {
+    catalogo: hasSubFilter
+      ? 'El usuario ya indicó su área de interés. Recomienda 2-3 productos del catálogo filtrado. Sé específico sobre aplicaciones y diferencias.'
+      : 'Pregúntale qué necesita o dónde lo va a usar para recomendarle los productos más adecuados.',
+    precios:  'El usuario pregunta por una cotización. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización y sepa qué productos y cantidades quiere.',
+    asesoria: 'El usuario tiene una duda técnica. Pregúntale qué tipo de producto o área le interesa para orientarlo mejor.',
+  };
+  return map[intent] || '';
+}
+
+module.exports = { buildSystemPrompt, buildFocusedPrompt, buildClarifyingPrompt };

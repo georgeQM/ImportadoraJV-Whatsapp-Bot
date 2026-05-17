@@ -76,7 +76,10 @@ const stmtSetContext = db.prepare(
 );
 
 function setContext(phone, context) {
-  stmtSetContext.run(context, phone);
+  const value = (context !== null && typeof context === 'object')
+    ? JSON.stringify(context)
+    : context;
+  stmtSetContext.run(value, phone);
 }
 
 const stmtGetContext = db.prepare(
@@ -85,7 +88,8 @@ const stmtGetContext = db.prepare(
 
 function getContext(phone) {
   const row = stmtGetContext.get(phone);
-  return row ? row.context : null;
+  if (!row || row.context === null) return null;
+  try { return JSON.parse(row.context); } catch { return row.context; }
 }
 
 // ── crawl_cache ───────────────────────────────
