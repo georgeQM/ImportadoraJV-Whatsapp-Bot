@@ -44,6 +44,9 @@ function formatProductCatalog() {
       if (p.rendimiento_nota)
         lines.push(`Nota de rendimiento: ${p.rendimiento_nota}`);
 
+      if (p.no_usar_para?.length)
+        lines.push(`No usar para: ${p.no_usar_para.join(', ')}`);
+
       if (p.linkWeb)
         lines.push(`Más info: ${p.linkWeb}`);
 
