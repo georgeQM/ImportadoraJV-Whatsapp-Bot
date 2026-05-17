@@ -25,7 +25,7 @@ async function getAIResponse(_phone, userMessage, history, context = null) {
   const completion = await client.chat.completions.create({
     model: 'gpt-4o-mini',
     messages,
-    max_tokens: 500,
+    max_tokens: 800,
     temperature: 0.7,
   });
 

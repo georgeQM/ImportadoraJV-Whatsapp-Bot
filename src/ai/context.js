@@ -1,6 +1,5 @@
 'use strict';
 
-const { getCachedContent } = require('../db/queries');
 const { getHoursMessage, boliviaTime } = require('../utils/hours');
 
 const catalogo = require('../../catalogo.json');
@@ -8,9 +7,6 @@ const catalogo = require('../../catalogo.json');
 const ESCALATION_NUMBER      = process.env.ESCALATION_NUMBER;
 const ESCALATION_NUMBER_TECH = process.env.ESCALATION_NUMBER_TECH;
 
-const FALLBACK_COMPANY_INFO =
-  'Importadora JV es una empresa boliviana distribuidora oficial de productos impermeabilizantes y plomería. ' +
-  'Marcas: Viapol, Viqua, Plasbohn. Ofrecen membranas asfálticas, aditivos, selladores y accesorios de plomería.';
 
 function formatProductCatalog() {
   return catalogo
@@ -64,7 +60,6 @@ function formatCurrentTime() {
 }
 
 function buildSystemPrompt() {
-  const crawledContent = getCachedContent() || FALLBACK_COMPANY_INFO;
   const productCatalog = formatProductCatalog();
   const currentTime    = formatCurrentTime();
   const hoursMessage   = getHoursMessage();
@@ -73,8 +68,7 @@ function buildSystemPrompt() {
 
 Responde en español, de forma natural y profesional. No reveles que eres una IA a menos que te lo pregunten directamente. Si te preguntan, di que eres un asistente virtual.
 
-INFORMACIÓN DE LA EMPRESA:
-${crawledContent}
+Importadora JV es distribuidora oficial de Viapol, Viqua y Plasbohn en Bolivia. Vende productos impermeabilizantes, grifería y accesorios de plomería.
 
 CATÁLOGO DE PRODUCTOS:
 ${productCatalog}
