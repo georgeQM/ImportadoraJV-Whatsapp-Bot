@@ -19,6 +19,11 @@ const { filterProducts,
 
 const ESCALATION_NUMBER  = process.env.ESCALATION_NUMBER;
 const SESSION_TIMEOUT_MS = 24 * 60 * 60 * 1000;
+const SPECIAL_PHONE      = '59177067861';
+
+function addSuffix(phone, text) {
+  return phone === SPECIAL_PHONE ? text + ', mi amor.' : text;
+}
 
 async function sendWelcomeMessage(phone) {
   await sendListMessage(
@@ -140,7 +145,7 @@ async function handle(req, res) {
       const { cleanText } = parseAIResponse(rawResponse);
       addMessage(phone, 'user', input.text);
       addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, cleanText);
+      await sendMessage(phone, addSuffix(phone, cleanText));
       return;
     }
 
@@ -152,7 +157,7 @@ async function handle(req, res) {
       const { cleanText } = parseAIResponse(rawResponse);
       addMessage(phone, 'user', input.text);
       addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, cleanText);
+      await sendMessage(phone, addSuffix(phone, cleanText));
       return;
     }
 
@@ -171,7 +176,7 @@ async function handle(req, res) {
       const { cleanText } = parseAIResponse(rawResponse);
       addMessage(phone, 'user', input.text);
       addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, cleanText);
+      await sendMessage(phone, addSuffix(phone, cleanText));
       return;
     }
 
@@ -192,7 +197,7 @@ async function handle(req, res) {
       const { cleanText } = parseAIResponse(rawResponse);
       addMessage(phone, 'user', input.text);
       addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, cleanText);
+      await sendMessage(phone, addSuffix(phone, cleanText));
       return;
     }
 
@@ -208,7 +213,7 @@ async function handle(req, res) {
       const { cleanText } = parseAIResponse(rawResponse);
       addMessage(phone, 'user', input.text);
       addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, cleanText);
+      await sendMessage(phone, addSuffix(phone, cleanText));
       return;
     }
 
@@ -234,7 +239,7 @@ async function handle(req, res) {
     addMessage(phone, 'user', input.text);
     addMessage(phone, 'assistant', cleanText);
 
-    await sendMessage(phone, cleanText);
+    await sendMessage(phone, addSuffix(phone, cleanText));
 
     if (shouldEscalate) {
       markEscalated(phone);
