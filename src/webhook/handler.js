@@ -226,8 +226,27 @@ async function handle(req, res) {
 
     const context     = getContext(phone);
 
-    if (!context || context.stage !== 'chat') {
-      await sendMessage(phone, 'Para ayudarte mejor, usá el menú:');
+    if (!context) {
+      await sendWelcomeMessage(phone);
+      return;
+    }
+
+    if (['category_select', 'surface_select', 'location_select'].includes(context.stage)) {
+      const redirects = (context.menuRedirects || 0) + 1;
+      if (redirects >= 5) {
+        setContext(phone, { ...context, menuRedirects: 0 });
+        await sendMessage(phone,
+          `Parece que tenés problemas para usar el menú. Podés contactar directamente a uno de nuestros asesores: 👉 https://wa.me/${ESCALATION_NUMBER}`
+        );
+      } else {
+        setContext(phone, { ...context, menuRedirects: redirects });
+        await sendMessage(phone, 'Para ayudarte mejor, usá el menú:');
+        await sendWelcomeMessage(phone);
+      }
+      return;
+    }
+
+    if (context.stage !== 'chat') {
       await sendWelcomeMessage(phone);
       return;
     }
