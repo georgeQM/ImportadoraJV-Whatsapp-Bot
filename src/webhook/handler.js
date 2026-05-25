@@ -66,6 +66,11 @@ async function handle(req, res) {
   // Respond immediately — WhatsApp requires 200 within 15s
   res.sendStatus(200);
 
+  if (message.type === 'audio' || message.type === 'voice') {
+    await sendMessage(phone, 'Por favor escribí tu consulta, no puedo escuchar mensajes de voz 😊');
+    return;
+  }
+
   const input = extractInput(message);
   if (!input) return;
 
@@ -220,6 +225,13 @@ async function handle(req, res) {
     // ── Normal AI flow ────────────────────────────────────────────────────
 
     const context     = getContext(phone);
+
+    if (!context || context.stage !== 'chat') {
+      await sendMessage(phone, 'Para ayudarte mejor, usá el menú:');
+      await sendWelcomeMessage(phone);
+      return;
+    }
+
     const clarify     = buildClarifyingPrompt(context);
     const subFilterId = context?.surfaceId || context?.locationId;
     const categoryId  = context?.categoryId ?? 'impermeabilizante';
