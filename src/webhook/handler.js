@@ -28,7 +28,7 @@ function addSuffix(phone, text) {
 async function sendWelcomeMessage(phone) {
   await sendListMessage(
     phone,
-    '¡Hola! Soy el asesor virtual de Importadora JV. ¿Con qué te ayudo hoy?',
+    '¡Hola! Soy tu asesor de productos de Importadora JV. ¿Con qué te ayudo hoy?',
     'Ver opciones',
     [{ title: '¿Qué necesitas?', rows: [
       { id: 'menu_buscar',   title: 'Buscar producto',  description: 'Encuentra el impermeabilizante ideal' },
