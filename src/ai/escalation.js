@@ -9,6 +9,7 @@ function parseAIResponse(response) {
   let cleanText = response;
   let shouldEscalate = false;
   let mediaId = null;
+  let cotizacionSummary = null;
 
   if (cleanText.includes('[ESCALATE]')) {
     shouldEscalate = true;
@@ -21,7 +22,13 @@ function parseAIResponse(response) {
     cleanText = cleanText.replace(/\[MEDIA:\d+\]/g, '').trim();
   }
 
-  return { cleanText, shouldEscalate, mediaId };
+  const cotizacionMatch = cleanText.match(/\[COTIZACION:([\s\S]+?)\]/);
+  if (cotizacionMatch) {
+    cotizacionSummary = cotizacionMatch[1].trim();
+    cleanText = cleanText.replace(/\[COTIZACION:[\s\S]+?\]/g, '').trim();
+  }
+
+  return { cleanText, shouldEscalate, mediaId, cotizacionSummary };
 }
 
 module.exports = { parseAIResponse };

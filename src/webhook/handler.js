@@ -122,47 +122,48 @@ async function handle(req, res) {
     }
 
     if (input.id === 'cat_impermeabilizante') {
-      setContext(phone, { stage: 'surface_select', categoryId: 'impermeabilizante', intent: 'catalogo' });
+      const prevCtx = getContext(phone);
+      setContext(phone, { stage: 'surface_select', categoryId: 'impermeabilizante', intent: prevCtx?.intent ?? 'catalogo' });
       await sendListMessage(phone, '¿En qué superficie necesitas impermeabilizar?', 'Ver superficies',
         [{ title: 'Selecciona tu caso', rows: SURFACE_MENU_ROWS }]);
       return;
     }
 
     if (input.id === 'cat_griferia') {
-      setContext(phone, { stage: 'location_select', categoryId: 'griferia', intent: 'catalogo' });
+      const prevCtx = getContext(phone);
+      setContext(phone, { stage: 'location_select', categoryId: 'griferia', intent: prevCtx?.intent ?? 'catalogo' });
       await sendListMessage(phone, '¿Para qué área o uso necesitas grifería?', 'Ver áreas',
         [{ title: 'Selecciona el área', rows: UBICACION_MENU_ROWS_GRIFERIA }]);
       return;
     }
 
     if (input.id === 'cat_jardin') {
-      setContext(phone, { stage: 'location_select', categoryId: 'jardin', intent: 'catalogo' });
+      const prevCtx = getContext(phone);
+      setContext(phone, { stage: 'location_select', categoryId: 'jardin', intent: prevCtx?.intent ?? 'catalogo' });
       await sendListMessage(phone, '¿Qué tipo de producto de jardín buscas?', 'Ver tipos',
         [{ title: 'Selecciona el tipo', rows: UBICACION_MENU_ROWS_JARDIN }]);
       return;
     }
 
     if (input.id === 'menu_cotizar') {
-      const ctx = { stage: 'chat', intent: 'precios' };
-      setContext(phone, ctx);
-      const prompt = buildSystemPrompt() + '\n\n' + buildClarifyingPrompt(ctx);
-      const rawResponse = await getAIResponse(phone, input.text, [], ctx, prompt);
-      const { cleanText } = parseAIResponse(rawResponse);
-      addMessage(phone, 'user', input.text);
-      addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, addSuffix(phone, cleanText));
+      setContext(phone, { stage: 'category_select', intent: 'precios' });
+      await sendListMessage(
+        phone,
+        '¿Qué línea de productos te interesa cotizar?',
+        'Ver categorías',
+        [{ title: 'Selecciona una línea', rows: CATEGORY_MENU_ROWS }]
+      );
       return;
     }
 
     if (input.id === 'menu_asesoria') {
-      const ctx = { stage: 'chat', intent: 'asesoria' };
-      setContext(phone, ctx);
-      const prompt = buildSystemPrompt() + '\n\n' + buildClarifyingPrompt(ctx);
-      const rawResponse = await getAIResponse(phone, input.text, [], ctx, prompt);
-      const { cleanText } = parseAIResponse(rawResponse);
-      addMessage(phone, 'user', input.text);
-      addMessage(phone, 'assistant', cleanText);
-      await sendMessage(phone, addSuffix(phone, cleanText));
+      setContext(phone, { stage: 'category_select', intent: 'asesoria' });
+      await sendListMessage(
+        phone,
+        '¿En qué línea de productos necesitás asesoría?',
+        'Ver categorías',
+        [{ title: 'Selecciona una línea', rows: CATEGORY_MENU_ROWS }]
+      );
       return;
     }
 
@@ -170,8 +171,9 @@ async function handle(req, res) {
 
     if (input.id?.startsWith('surf_')) {
       const surfaceId = input.id.replace('surf_', '');
+      const prevCtx   = getContext(phone);
       const products  = filterProducts('impermeabilizante', surfaceId);
-      const ctx       = { stage: 'chat', intent: 'catalogo', categoryId: 'impermeabilizante', surfaceId };
+      const ctx       = { stage: 'chat', intent: prevCtx?.intent ?? 'catalogo', categoryId: 'impermeabilizante', surfaceId };
       setContext(phone, ctx);
       const clarify = buildClarifyingPrompt(ctx);
       const prompt  = products.length > 0
@@ -192,7 +194,7 @@ async function handle(req, res) {
       const prevCtx    = getContext(phone);
       const categoryId = prevCtx?.categoryId ?? 'griferia';
       const products   = filterProducts(categoryId, locationId);
-      const ctx        = { stage: 'chat', intent: 'catalogo', categoryId, locationId };
+      const ctx        = { stage: 'chat', intent: prevCtx?.intent ?? 'catalogo', categoryId, locationId };
       setContext(phone, ctx);
       const clarify = buildClarifyingPrompt(ctx);
       const prompt  = products.length > 0
@@ -266,7 +268,7 @@ async function handle(req, res) {
     }
 
     const rawResponse = await getAIResponse(phone, input.text, history, context, prompt);
-    const { cleanText, shouldEscalate, mediaId } = parseAIResponse(rawResponse);
+    const { cleanText, shouldEscalate, mediaId, cotizacionSummary } = parseAIResponse(rawResponse);
 
     addMessage(phone, 'user', input.text);
     addMessage(phone, 'assistant', cleanText);
@@ -277,6 +279,13 @@ async function handle(req, res) {
       markEscalated(phone);
       setContext(phone, null);
       await sendMessage(phone, `👉 https://wa.me/${ESCALATION_NUMBER}`);
+    }
+
+    if (cotizacionSummary) {
+      await sendMessage(
+        ESCALATION_NUMBER,
+        `${cotizacionSummary}\n\n📞 Contactar cliente: https://wa.me/${phone}`
+      );
     }
 
     if (mediaId) {

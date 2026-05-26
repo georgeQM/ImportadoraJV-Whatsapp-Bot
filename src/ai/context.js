@@ -84,6 +84,7 @@ CONTACTO Y ESCALAMIENTO:
 - Para consultas técnicas o de distribuidores: +${ESCALATION_NUMBER_TECH}
 - Cuando necesites escalar a un humano, incluye exactamente esta etiqueta en tu respuesta: [ESCALATE]
 - Cuando el usuario pida el PDF o video de un producto específico, incluye: [MEDIA:id] usando el ID numérico del catálogo
+- Cuando el usuario haya confirmado producto(s), cantidad y ciudad para cotizar, generá el resumen de la cotización con: [COTIZACION:resumen completo] — no uses [ESCALATE] para cotizaciones
 
 HORA ACTUAL: ${currentTime} (Bolivia, UTC-4)
 HORARIO DE ATENCIÓN: ${hoursMessage}
@@ -113,7 +114,7 @@ function buildClarifyingPrompt(contextObj) {
     catalogo: hasSubFilter
       ? 'El usuario ya indicó su área de interés. Recomienda 2-3 productos del catálogo filtrado. Sé específico sobre aplicaciones y diferencias.'
       : 'Pregúntale qué necesita o dónde lo va a usar para recomendarle los productos más adecuados.',
-    precios:  'El usuario pregunta por una cotización. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización y sepa qué productos y cantidades quiere.',
+    precios:  'El usuario pregunta por una cotización. Explica que los precios varían según el producto y cantidad. Pregúntale qué producto le interesa y en qué cantidad. No incluyas [ESCALATE] todavía — solo escalá cuando el usuario confirme que quiere la cotización y sepa qué productos y cantidades quiere. Después de recopilar el primer producto, preguntá si necesita algo más antes de generar el resumen final.',
     asesoria: 'El usuario tiene una duda técnica. Pregúntale qué tipo de producto o área le interesa para orientarlo mejor.',
   };
   return map[intent] || '';
