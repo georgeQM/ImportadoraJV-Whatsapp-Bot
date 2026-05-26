@@ -227,13 +227,14 @@ async function handle(req, res) {
     const context     = getContext(phone);
 
     if (!context) {
+      setContext(phone, { stage: 'redirecting', menuRedirects: 1 });
       await sendWelcomeMessage(phone);
       return;
     }
 
-    if (['category_select', 'surface_select', 'location_select'].includes(context.stage)) {
+    if (['redirecting', 'category_select', 'surface_select', 'location_select'].includes(context.stage)) {
       const redirects = (context.menuRedirects || 0) + 1;
-      if (redirects >= 5) {
+      if (redirects >= 3) {
         setContext(phone, { ...context, menuRedirects: 0 });
         await sendMessage(phone,
           `Parece que tenés problemas para usar el menú. Podés contactar directamente a uno de nuestros asesores: 👉 https://wa.me/${ESCALATION_NUMBER}`
