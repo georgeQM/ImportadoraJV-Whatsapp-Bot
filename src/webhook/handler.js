@@ -287,7 +287,7 @@ async function handle(req, res) {
         addMessage(phone, 'assistant', ct2);
         await sendMessage(phone, ct2);
 
-        if (esc2) { markEscalated(phone); setContext(phone, null); await sendMessage(phone, `👉 https://wa.me/${ESCALATION_NUMBER}`); }
+        if (esc2) { markEscalated(phone); setContext(phone, null); await sendMessage(phone, `Para continuar con tu pedido, contactá directamente a nuestro asesor: 👉 https://wa.me/${ESCALATION_NUMBER}`); }
         if (cot2) { await sendMessage(ESCALATION_NUMBER, `${cot2}\n\n📞 Contactar cliente: https://wa.me/${phone}`); }
         if (mid2) {
           const prod2 = getProductById(mid2);
@@ -315,7 +315,7 @@ async function handle(req, res) {
     if (shouldEscalate) {
       markEscalated(phone);
       setContext(phone, null);
-      await sendMessage(phone, `👉 https://wa.me/${ESCALATION_NUMBER}`);
+      await sendMessage(phone, `Para continuar con tu pedido, contactá directamente a nuestro asesor: 👉 https://wa.me/${ESCALATION_NUMBER}`);
     }
 
     if (cotizacionSummary) {
