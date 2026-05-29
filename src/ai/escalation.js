@@ -28,7 +28,14 @@ function parseAIResponse(response) {
     cleanText = cleanText.replace(/\[COTIZACION:[\s\S]+?\]/g, '').trim();
   }
 
-  return { cleanText, shouldEscalate, mediaId, cotizacionSummary };
+  let cambiarSuperficie = null;
+  const cambiarMatch = cleanText.match(/\[CAMBIAR_SUPERFICIE:([a-z_]+)\]/);
+  if (cambiarMatch) {
+    cambiarSuperficie = cambiarMatch[1];
+    cleanText = cleanText.replace(/\[CAMBIAR_SUPERFICIE:[a-z_]+\]/g, '').trim();
+  }
+
+  return { cleanText, shouldEscalate, mediaId, cotizacionSummary, cambiarSuperficie };
 }
 
 module.exports = { parseAIResponse };

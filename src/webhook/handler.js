@@ -268,7 +268,44 @@ async function handle(req, res) {
     }
 
     const rawResponse = await getAIResponse(phone, input.text, history, context, prompt);
-    const { cleanText, shouldEscalate, mediaId, cotizacionSummary } = parseAIResponse(rawResponse);
+    const { cleanText, shouldEscalate, mediaId, cotizacionSummary, cambiarSuperficie } = parseAIResponse(rawResponse);
+
+    if (cambiarSuperficie) {
+      const newProducts = filterProducts('impermeabilizante', cambiarSuperficie);
+      const newCtx = { ...context, surfaceId: cambiarSuperficie, categoryId: 'impermeabilizante', stage: 'chat' };
+      delete newCtx.locationId;
+      setContext(phone, newCtx);
+
+      if (newProducts.length > 0) {
+        const newClarify = buildClarifyingPrompt(newCtx);
+        const newPrompt  = buildFocusedPrompt(newProducts) + (newClarify ? '\n\n' + newClarify : '');
+        const raw2 = await getAIResponse(phone, input.text, history, newCtx, newPrompt);
+        const { cleanText: ct2, shouldEscalate: esc2,
+                mediaId: mid2, cotizacionSummary: cot2 } = parseAIResponse(raw2);
+
+        addMessage(phone, 'user', input.text);
+        addMessage(phone, 'assistant', ct2);
+        await sendMessage(phone, ct2);
+
+        if (esc2) { markEscalated(phone); setContext(phone, null); await sendMessage(phone, `👉 https://wa.me/${ESCALATION_NUMBER}`); }
+        if (cot2) { await sendMessage(ESCALATION_NUMBER, `${cot2}\n\n📞 Contactar cliente: https://wa.me/${phone}`); }
+        if (mid2) {
+          const prod2 = getProductById(mid2);
+          if (prod2) {
+            if (prod2.mediaVideo) { await sendVideo(phone, prod2.mediaVideo, `Video: ${prod2.nombre}`); await new Promise(r => setTimeout(r, 1500)); }
+            if (prod2.mediaPdf)   { await sendPDF(phone, prod2.mediaPdf, `Ficha Tecnica ${prod2.nombre}`, `Ficha técnica: ${prod2.nombre}`); }
+          }
+        }
+      } else {
+        addMessage(phone, 'user', input.text);
+        markEscalated(phone);
+        setContext(phone, null);
+        await sendMessage(phone,
+          `No encontré productos para ese tipo de aplicación en nuestro catálogo. Te conecto con un asesor. 👉 https://wa.me/${ESCALATION_NUMBER}`
+        );
+      }
+      return;
+    }
 
     addMessage(phone, 'user', input.text);
     addMessage(phone, 'assistant', cleanText);

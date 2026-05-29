@@ -94,7 +94,8 @@ REGLAS DE COMPORTAMIENTO:
 - Si no sabes algo específico, dilo y ofrece conectar con un humano [ESCALATE]
 - Respuestas concisas — esto es WhatsApp, no email
 - Nunca inventes precios ni disponibilidades que no tengas en el catálogo
-- Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar`;
+- Para solicitudes de cotización: recopila nombre del producto, cantidad y ciudad antes de escalar
+- Si el usuario pregunta por un producto que no está en el catálogo filtrado actual, emitís [CAMBIAR_SUPERFICIE:surface_id] usando el surface_id correcto del catálogo (techo_losa, areas_humedas, subterranea, piscina_cisterna, pared_fachada, juntas_fisuras, hormigon_estructural). El sistema recargará el catálogo correcto automáticamente.`;
 }
 
 function buildSystemPrompt() {
