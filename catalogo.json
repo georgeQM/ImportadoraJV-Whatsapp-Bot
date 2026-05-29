@@ -239,6 +239,7 @@
     "no_usar_para": ["mampostería", "mortero de acabado", "paredes de ladrillo", "uso sobre superficie existente"],
     "descripcion": "Aditivo cristalizante que se mezcla en el hormigón durante el vaciado. Impermeabiliza desde adentro. Para obra nueva.",
     "rendimiento_kg_m2": null,
+    "rendimiento_nota": "Dosificación en seco: agregar con 20-30% de agregados y 60-70% del agua, mezclar 3 min mínimo. Dosificación húmeda: mezclar 20kg en 10L de agua, agregar a la hormigonera con el resto de materiales, mezclar 5-10 min. En mezcladora de obra: agregar con agregados primero, mezclar 5 min, luego agregar cemento y agua.",
     "presentaciones": null,
     "precio": null,
     "linkWeb": "https://importadorajv.com/producto/eucon-vandex-am-10"

@@ -229,8 +229,46 @@ async function handle(req, res) {
     const context     = getContext(phone);
 
     if (!context) {
-      setContext(phone, { stage: 'redirecting', menuRedirects: 1 });
-      await sendWelcomeMessage(phone);
+      const GREETING_PATTERNS = /^(hola|buenas|hi|hello|inicio|start|men[uú])$/i;
+      const trimmed = input.text.trim();
+      const isGreeting = GREETING_PATTERNS.test(trimmed) || trimmed.length < 10;
+
+      if (isGreeting) {
+        setContext(phone, { stage: 'redirecting', menuRedirects: 1 });
+        await sendWelcomeMessage(phone);
+        return;
+      }
+
+      const nullCtx = { stage: 'chat', intent: 'catalogo' };
+      setContext(phone, nullCtx);
+      const nullHistory = getHistory(phone, 20);
+      const nullPrompt  = buildSystemPrompt();
+      const nullRaw     = await getAIResponse(phone, input.text, nullHistory, nullCtx, nullPrompt);
+      const { cleanText: nullClean, shouldEscalate: nullEscalate, mediaId: nullMediaId } = parseAIResponse(nullRaw);
+      const menuSuffix  = '\n\n_Usá el menú para explorar nuestros productos: escribí *menú* en cualquier momento._';
+
+      addMessage(phone, 'user', input.text);
+      addMessage(phone, 'assistant', nullClean);
+      await sendMessage(phone, nullClean + menuSuffix);
+
+      if (nullEscalate) {
+        markEscalated(phone);
+        setContext(phone, null);
+        await sendMessage(phone, `Para continuar con tu pedido, contactá directamente a nuestro asesor: 👉 https://wa.me/${ESCALATION_NUMBER}`);
+      }
+
+      if (nullMediaId) {
+        const nullProduct = getProductById(nullMediaId);
+        if (nullProduct) {
+          if (nullProduct.mediaVideo) {
+            await sendVideo(phone, nullProduct.mediaVideo, `Video: ${nullProduct.nombre}`);
+            await new Promise(r => setTimeout(r, 1500));
+          }
+          if (nullProduct.mediaPdf) {
+            await sendPDF(phone, nullProduct.mediaPdf, `Ficha Tecnica ${nullProduct.nombre}`, `Ficha técnica: ${nullProduct.nombre}`);
+          }
+        }
+      }
       return;
     }
 
