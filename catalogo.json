@@ -219,7 +219,7 @@
     "nombre": "Eucorepair Vandex",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon estructural dañado", "junta de hormigon", "agujero de tensor"],
+    "superficies": ["hormigon estructural dañado", "junta de hormigon", "agujero de tensor", "pared de hormigon", "fachada de hormigon"],
     "problema": ["reparacion de hormigon degradado", "sellado de juntas con humedad activa", "reparacion de agujeros de tensores"],
     "no_usar_para": ["mampostería", "grietas en paredes comunes", "uso como impermeabilizante de área"],
     "descripcion": "Mortero de reparación con cristalizante incorporado. Espesores 10mm a 125mm. Para reparaciones estructurales puntuales en hormigón.",
