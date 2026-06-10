@@ -12,6 +12,8 @@
     "rendimiento_m2_por_unidad": 10,
     "presentaciones": ["rollo 10m²"],
     "precio": null,
+    "mediaPdf": "1473766394106172",
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/torodin"
   },
   {
@@ -28,6 +30,8 @@
     "presentaciones": ["galón 3,6 kg", "balde 18 kg"],
     "rendimiento_nota": "Galón 3,6kg: 1,4m² azoteas / 1,8m² áreas húmedas. Balde 18kg: 7m² azoteas / 9m² áreas húmedas. 5 manos.",
     "precio": null,
+    "mediaPdf": "1163788128966399",
+    "mediaVideo": "799631466487801",
     "linkWeb": "https://importadorajv.com/producto/vedalage-negro"
   },
   {
@@ -43,6 +47,8 @@
     "rendimiento_m2_por_unidad": null,
     "presentaciones": ["rollo 10cm", "rollo 15cm", "rollo 20cm", "rollo 30cm", "rollo 45cm", "rollo 94cm"],
     "precio": null,
+    "mediaPdf": "1394511329081248",
+    "mediaVideo": "2335986443589366",
     "linkWeb": "https://importadorajv.com/producto/membrana-asfaltica-autoadesiva-color-aluminio-viaflex-fita"
   },
   {
@@ -58,6 +64,8 @@
     "rendimiento_m2_por_unidad": null,
     "presentaciones": ["rollo 10cm", "rollo 15cm", "rollo 20cm", "rollo 30cm", "rollo 45cm", "rollo 94cm"],
     "precio": null,
+    "mediaPdf": "1394511329081248",
+    "mediaVideo": "2335986443589366",
     "linkWeb": "https://importadorajv.com/producto/membrana-asfaltica-autoadesiva-color-teja-viaflex-fita"
   },
   {
@@ -73,6 +81,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": ["balde 18 kg"],
     "precio": null,
+    "mediaPdf": "4295085587399574",
+    "mediaVideo": "1463712021946286",
     "linkWeb": "https://importadorajv.com/producto/ecoprimer"
   },
   {
@@ -88,6 +98,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/contra-humedad"
   },
   {
@@ -104,6 +116,8 @@
     "presentaciones": ["caja 18 kg"],
     "rendimiento_nota": "3 a 4 kg/m² presión positiva. 4 a 5 kg/m² presión negativa. 3 a 4 manos.",
     "precio": null,
+    "mediaPdf": "2189939724870447",
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-1000"
   },
   {
@@ -120,6 +134,8 @@
     "presentaciones": ["caja 18 kg"],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
+    "mediaPdf": "25679745471647881",
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-5000"
   },
   {
@@ -135,6 +151,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": "2261824621013013",
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viafix"
   },
   {
@@ -151,6 +169,8 @@
     "presentaciones": ["galón 4 kg", "balde 12 kg", "balde 18 kg"],
     "rendimiento_nota": "~1 kg/m² en 4-5 manos. Galón 4kg rinde ~4m².",
     "precio": null,
+    "mediaPdf": "1392306299362780",
+    "mediaVideo": "1927902147833775",
     "linkWeb": "https://importadorajv.com/producto/vedalage-plus"
   },
   {
@@ -166,6 +186,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": "928644689685410",
+    "mediaVideo": "1522493072176120",
     "linkWeb": "https://importadorajv.com/producto/sella-grietas"
   },
   {
@@ -181,6 +203,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": "2469471060151179",
+    "mediaVideo": "2068957583893035",
     "linkWeb": "https://importadorajv.com/producto/viaplus-reparo"
   },
   {
@@ -196,6 +220,8 @@
     "rendimiento_m2_por_unidad": null,
     "presentaciones": ["rollo"],
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viafoil"
   },
   {
@@ -211,6 +237,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/vandex-super"
   },
   {
@@ -219,13 +247,15 @@
     "nombre": "Eucorepair Vandex",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon estructural dañado", "junta de hormigon", "agujero de tensor", "pared de hormigon", "fachada de hormigon"],
+    "superficies": ["hormigon estructural dañado", "junta de hormigon", "agujero de tensor", "pared de hormigon", "fachada de hormigon", "fachada", "pared exterior"],
     "problema": ["reparacion de hormigon degradado", "sellado de juntas con humedad activa", "reparacion de agujeros de tensores"],
     "no_usar_para": ["mampostería", "grietas en paredes comunes", "uso como impermeabilizante de área"],
     "descripcion": "Mortero de reparación con cristalizante incorporado. Espesores 10mm a 125mm. Para reparaciones estructurales puntuales en hormigón.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/eucorepair-vandex"
   },
   {
@@ -242,6 +272,8 @@
     "rendimiento_nota": "Dosificación en seco: agregar con 20-30% de agregados y 60-70% del agua, mezclar 3 min mínimo. Dosificación húmeda: mezclar 20kg en 10L de agua, agregar a la hormigonera con el resto de materiales, mezclar 5-10 min. En mezcladora de obra: agregar con agregados primero, mezclar 5 min, luego agregar cemento y agua.",
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/eucon-vandex-am-10"
   },
   {
@@ -257,6 +289,8 @@
     "rendimiento_m2_por_unidad": null,
     "presentaciones": ["rollo"],
     "precio": null,
+    "mediaPdf": "1464166701812520",
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/mantex"
   },
   {
@@ -272,6 +306,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/kiesey"
   },
   {
@@ -287,6 +323,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/po-2"
   },
   {
@@ -302,6 +340,8 @@
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viamix-expande-massa"
   },
   {
@@ -318,6 +358,8 @@
     "presentaciones": ["caja 18 kg"],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-7000"
   },
   {
@@ -334,6 +376,8 @@
     "presentaciones": ["sachet 600ml"],
     "rendimiento_nota": "Rinde 16,6m para junta de 6x6mm.",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/sella-juntas"
   },
   {
@@ -350,6 +394,8 @@
     "presentaciones": ["caja 18 kg"],
     "rendimiento_nota": "3 a 5 kg/m².",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-2000-fibras"
   },
   {
@@ -366,6 +412,8 @@
     "presentaciones": ["caja 18 kg"],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-6000-fibras"
   },
   {
@@ -382,6 +430,8 @@
     "presentaciones": ["caja 18 kg"],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-10000-lozas"
   },
   {
@@ -398,6 +448,8 @@
     "presentaciones": ["sachet 600ml"],
     "rendimiento_nota": "16,6m para junta de 6x6mm.",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/dymonic-100"
   },
   {
@@ -414,6 +466,8 @@
     "presentaciones": ["tambor 200 L"],
     "rendimiento_nota": "0,1% a 1,5% del peso del cemento.",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/plastol"
   },
   {
@@ -430,6 +484,8 @@
     "presentaciones": ["tambor 200 L"],
     "rendimiento_nota": "0,2% a 1,8% del peso del cemento.",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/plastoflow"
   },
   {
@@ -446,6 +502,8 @@
     "presentaciones": ["galón 3,6 kg", "balde 18 kg"],
     "rendimiento_nota": "0,4 l/m².",
     "precio": null,
+    "mediaPdf": null,
+    "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viabit-acqua-antiraiz"
   }
 ]
