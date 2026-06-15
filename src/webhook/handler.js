@@ -224,21 +224,25 @@ async function handle(req, res) {
       return;
     }
 
+    // ── Greeting / short-text redirect ───────────────────────────────────
+
+    const GREETING_PATTERNS = /^(hola|buenas|hi|hello|inicio|start|men[uú])$/i;
+    const trimmed = input.text.trim();
+    const isGreeting = GREETING_PATTERNS.test(trimmed) || trimmed.length < 10;
+
+    if (isGreeting) {
+      const existingCtx = getContext(phone);
+      const currentRedirects = existingCtx?.menuRedirects || 0;
+      setContext(phone, { stage: 'redirecting', menuRedirects: currentRedirects + 1 });
+      await sendWelcomeMessage(phone);
+      return;
+    }
+
     // ── Normal AI flow ────────────────────────────────────────────────────
 
     const context     = getContext(phone);
 
     if (!context) {
-      const GREETING_PATTERNS = /^(hola|buenas|hi|hello|inicio|start|men[uú])$/i;
-      const trimmed = input.text.trim();
-      const isGreeting = GREETING_PATTERNS.test(trimmed) || trimmed.length < 10;
-
-      if (isGreeting) {
-        setContext(phone, { stage: 'redirecting', menuRedirects: 1 });
-        await sendWelcomeMessage(phone);
-        return;
-      }
-
       const nullCtx = { stage: 'chat', intent: 'catalogo' };
       setContext(phone, nullCtx);
       const nullHistory = getHistory(phone, 20);
