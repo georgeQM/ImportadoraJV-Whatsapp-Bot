@@ -6,10 +6,16 @@ const { getHoursMessage, boliviaTime } = require('../utils/hours');
 const ESCALATION_NUMBER      = process.env.ESCALATION_NUMBER;
 const ESCALATION_NUMBER_TECH = process.env.ESCALATION_NUMBER_TECH;
 
-function formatProductCatalog(products = null) {
+function formatProductCatalog(products = null, priorityId = null) {
   return products
     .slice()
-    .sort((a, b) => Number(a.id) - Number(b.id))
+    .sort((a, b) => {
+      if (priorityId) {
+        if (a.id === priorityId) return -1;
+        if (b.id === priorityId) return  1;
+      }
+      return Number(a.id) - Number(b.id);
+    })
     .map(p => {
       const lines = [];
 
@@ -63,12 +69,12 @@ function formatCurrentTime() {
   return `${now.getDate()} de ${months[now.getMonth()]}, ${pad(now.getHours())}:${pad(now.getMinutes())}`;
 }
 
-function buildSystemPromptWith(products = null) {
+function buildSystemPromptWith(products = null, priorityId = null) {
   const currentTime  = formatCurrentTime();
   const hoursMessage = getHoursMessage();
 
   const catalogSection = products
-    ? `CATÁLOGO DE PRODUCTOS:\n${formatProductCatalog(products)}`
+    ? `CATÁLOGO DE PRODUCTOS:\n${formatProductCatalog(products, priorityId)}`
     : 'Para recomendar productos específicos, el sistema de menús guiará al usuario a seleccionar su categoría y área de interés. No listes productos hasta que el usuario haya seleccionado una categoría.';
 
   return `Eres el asistente virtual de Importadora JV, una empresa boliviana especializada en productos impermeabilizantes y accesorios de plomería.
@@ -102,8 +108,8 @@ function buildSystemPrompt() {
   return buildSystemPromptWith(null);
 }
 
-function buildFocusedPrompt(products) {
-  return buildSystemPromptWith(products);
+function buildFocusedPrompt(products, priorityId = null) {
+  return buildSystemPromptWith(products, priorityId);
 }
 
 function buildClarifyingPrompt(contextObj) {

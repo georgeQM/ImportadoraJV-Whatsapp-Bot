@@ -177,7 +177,7 @@ async function handle(req, res) {
       setContext(phone, ctx);
       const clarify = buildClarifyingPrompt(ctx);
       const prompt  = products.length > 0
-        ? buildFocusedPrompt(products) + '\n\n' + clarify
+        ? buildFocusedPrompt(products, surfaceId === 'techo_losa' ? '125' : null) + '\n\n' + clarify
         : buildSystemPrompt()          + '\n\n' + clarify;
       const rawResponse = await getAIResponse(phone, input.text, [], ctx, prompt);
       const { cleanText } = parseAIResponse(rawResponse);
@@ -303,7 +303,7 @@ async function handle(req, res) {
     if (subFilterId) {
       const products = filterProducts(categoryId, subFilterId);
       prompt = products.length > 0
-        ? buildFocusedPrompt(products) + (clarify ? '\n\n' + clarify : '')
+        ? buildFocusedPrompt(products, subFilterId === 'techo_losa' ? '125' : null) + (clarify ? '\n\n' + clarify : '')
         : buildSystemPrompt()          + (clarify ? '\n\n' + clarify : '');
     } else {
       prompt = buildSystemPrompt() + (clarify ? '\n\n' + clarify : '');
@@ -320,7 +320,7 @@ async function handle(req, res) {
 
       if (newProducts.length > 0) {
         const newClarify = buildClarifyingPrompt(newCtx);
-        const newPrompt  = buildFocusedPrompt(newProducts) + (newClarify ? '\n\n' + newClarify : '');
+        const newPrompt  = buildFocusedPrompt(newProducts, cambiarSuperficie === 'techo_losa' ? '125' : null) + (newClarify ? '\n\n' + newClarify : '');
         const raw2 = await getAIResponse(phone, input.text, history, newCtx, newPrompt);
         const { cleanText: ct2, shouldEscalate: esc2,
                 mediaId: mid2, cotizacionSummary: cot2 } = parseAIResponse(raw2);
