@@ -5,14 +5,29 @@
     "nombre": "Torodin",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["losa expuesta sin circulación", "techo expuesto", "azotea sin tráfico peatonal"],
-    "problema": ["filtraciones en losa expuesta", "impermeabilización de techo sin tráfico", "goteras en azotea"],
-    "no_usar_para": ["paredes", "muros subterráneos", "piscinas", "áreas con tráfico peatonal"],
+    "superficies": [
+      "losa expuesta sin circulación",
+      "techo expuesto",
+      "azotea sin tráfico peatonal"
+    ],
+    "problema": [
+      "filtraciones en losa expuesta",
+      "impermeabilización de techo sin tráfico",
+      "goteras en azotea"
+    ],
+    "no_usar_para": [
+      "paredes",
+      "muros subterráneos",
+      "piscinas",
+      "áreas con tráfico peatonal"
+    ],
     "descripcion": "Membrana asfáltica en rollo de 1,30m². Grosores 3mm y 4mm. Para áreas residenciales expuestas sin circulación.",
     "rendimiento_m2_por_unidad": 10,
-    "presentaciones": ["rollo 10m²"],
+    "presentaciones": [
+      "rollo 10m²"
+    ],
     "precio": null,
-    "mediaPdf": "1473766394106172",
+    "mediaPdf": "1002570702142660",
     "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/torodin"
   },
@@ -22,16 +37,37 @@
     "nombre": "Vedalage Negro",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["losa", "pared interior", "muro de contencion lado tierra", "baño", "cocina", "balcon", "jardinera", "canaleta de hormigon", "sauna"],
-    "problema": ["filtraciones en losa", "humedad en areas frias", "impermeabilización de losa con revestimiento", "humedad en muros interiores"],
-    "no_usar_para": ["losa expuesta sin protección mecánica", "superficies exteriores sin recubrimiento"],
+    "superficies": [
+      "losa",
+      "pared interior",
+      "muro de contencion lado tierra",
+      "baño",
+      "cocina",
+      "balcon",
+      "jardinera",
+      "canaleta de hormigon",
+      "sauna"
+    ],
+    "problema": [
+      "filtraciones en losa",
+      "humedad en areas frias",
+      "impermeabilización de losa con revestimiento",
+      "humedad en muros interiores"
+    ],
+    "no_usar_para": [
+      "losa expuesta sin protección mecánica",
+      "superficies exteriores sin recubrimiento"
+    ],
     "descripcion": "Manta líquida asfáltica lista para usar. Aplicación en frío. Requiere protección mecánica o revestimiento en exteriores.",
-    "rendimiento_kg_m2": 2.0,
-    "presentaciones": ["galón 3,6 kg", "balde 18 kg"],
+    "rendimiento_kg_m2": 2,
+    "presentaciones": [
+      "galón 3,6 kg",
+      "balde 18 kg"
+    ],
     "rendimiento_nota": "Galón 3,6kg: 1,4m² azoteas / 1,8m² áreas húmedas. Balde 18kg: 7m² azoteas / 9m² áreas húmedas. 5 manos.",
     "precio": null,
-    "mediaPdf": "1163788128966399",
-    "mediaVideo": "799631466487801",
+    "mediaPdf": "953307084383764",
+    "mediaVideo": "1904160250259221",
     "linkWeb": "https://importadorajv.com/producto/vedalage-negro"
   },
   {
@@ -40,15 +76,37 @@
     "nombre": "Membrana Asfáltica Autoadhesiva Aluminio Viaflex",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["techo metalico", "fibrocemento", "canaleta metalica", "junta de construccion", "tuberia PVC expuesta"],
-    "problema": ["filtraciones puntuales", "reparacion rapida de goteras", "sellado de juntas en techo", "infiltraciones en canaletas"],
-    "no_usar_para": ["superficies bajo tierra", "áreas con presión hidrostática", "hormigón en masa"],
+    "superficies": [
+      "techo metalico",
+      "fibrocemento",
+      "canaleta metalica",
+      "junta de construccion",
+      "tuberia PVC expuesta"
+    ],
+    "problema": [
+      "filtraciones puntuales",
+      "reparacion rapida de goteras",
+      "sellado de juntas en techo",
+      "infiltraciones en canaletas"
+    ],
+    "no_usar_para": [
+      "superficies bajo tierra",
+      "áreas con presión hidrostática",
+      "hormigón en masa"
+    ],
     "descripcion": "Cinta autoadhesiva asfáltica con lámina de aluminio. Sin herramientas ni calor. Solución rápida para reparaciones.",
     "rendimiento_m2_por_unidad": null,
-    "presentaciones": ["rollo 10cm", "rollo 15cm", "rollo 20cm", "rollo 30cm", "rollo 45cm", "rollo 94cm"],
+    "presentaciones": [
+      "rollo 10cm",
+      "rollo 15cm",
+      "rollo 20cm",
+      "rollo 30cm",
+      "rollo 45cm",
+      "rollo 94cm"
+    ],
     "precio": null,
-    "mediaPdf": "1394511329081248",
-    "mediaVideo": "2335986443589366",
+    "mediaPdf": "991115480322747",
+    "mediaVideo": "2015562679349207",
     "linkWeb": "https://importadorajv.com/producto/membrana-asfaltica-autoadesiva-color-aluminio-viaflex-fita"
   },
   {
@@ -57,15 +115,35 @@
     "nombre": "Membrana Asfáltica Autoadhesiva Teja Viaflex",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["techo metalico", "fibrocemento", "canaleta metalica", "junta de construccion", "tuberia PVC expuesta"],
-    "problema": ["filtraciones puntuales", "reparacion rapida de goteras", "sellado de juntas en techo color teja"],
-    "no_usar_para": ["superficies bajo tierra", "áreas con presión hidrostática"],
+    "superficies": [
+      "techo metalico",
+      "fibrocemento",
+      "canaleta metalica",
+      "junta de construccion",
+      "tuberia PVC expuesta"
+    ],
+    "problema": [
+      "filtraciones puntuales",
+      "reparacion rapida de goteras",
+      "sellado de juntas en techo color teja"
+    ],
+    "no_usar_para": [
+      "superficies bajo tierra",
+      "áreas con presión hidrostática"
+    ],
     "descripcion": "Igual a la versión aluminio pero en color teja para mimetizar con el techo. Cinta autoadhesiva de aplicación inmediata.",
     "rendimiento_m2_por_unidad": null,
-    "presentaciones": ["rollo 10cm", "rollo 15cm", "rollo 20cm", "rollo 30cm", "rollo 45cm", "rollo 94cm"],
+    "presentaciones": [
+      "rollo 10cm",
+      "rollo 15cm",
+      "rollo 20cm",
+      "rollo 30cm",
+      "rollo 45cm",
+      "rollo 94cm"
+    ],
     "precio": null,
-    "mediaPdf": "1394511329081248",
-    "mediaVideo": "2335986443589366",
+    "mediaPdf": "2069177837336196",
+    "mediaVideo": "2072022780098018",
     "linkWeb": "https://importadorajv.com/producto/membrana-asfaltica-autoadesiva-color-teja-viaflex-fita"
   },
   {
@@ -74,15 +152,28 @@
     "nombre": "Ecoprimer",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon", "mortero", "mamposteria", "fibra de vidrio"],
-    "problema": ["imprimacion antes de aplicar membrana asfaltica", "mejora de adherencia para mantas y cintas"],
-    "no_usar_para": ["uso como impermeabilizante final", "superficies pintadas o con cera"],
+    "superficies": [
+      "hormigon",
+      "mortero",
+      "mamposteria",
+      "fibra de vidrio"
+    ],
+    "problema": [
+      "imprimacion antes de aplicar membrana asfaltica",
+      "mejora de adherencia para mantas y cintas"
+    ],
+    "no_usar_para": [
+      "uso como impermeabilizante final",
+      "superficies pintadas o con cera"
+    ],
     "descripcion": "Imprimación base agua sin disolventes para pegado de mantas y cintas asfálticas. No es impermeabilizante por sí solo — es paso previo.",
     "rendimiento_kg_m2": null,
-    "presentaciones": ["balde 18 kg"],
+    "presentaciones": [
+      "balde 18 kg"
+    ],
     "precio": null,
-    "mediaPdf": "4295085587399574",
-    "mediaVideo": "1463712021946286",
+    "mediaPdf": "1023933500309811",
+    "mediaVideo": "2218280248921033",
     "linkWeb": "https://importadorajv.com/producto/ecoprimer"
   },
   {
@@ -91,9 +182,25 @@
     "nombre": "Contra Humedad",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon en masa", "mortero estructural", "cimiento", "piscina subterranea", "sotano", "tanque enterrado"],
-    "problema": ["humedad ascendente en fundaciones", "filtraciones en estructuras bajo tierra", "presión hidrostática en cimientos"],
-    "no_usar_para": ["losas expuestas", "paredes interiores terminadas", "techos", "uso como sellador de grietas"],
+    "superficies": [
+      "hormigon en masa",
+      "mortero estructural",
+      "cimiento",
+      "piscina subterranea",
+      "sotano",
+      "tanque enterrado"
+    ],
+    "problema": [
+      "humedad ascendente en fundaciones",
+      "filtraciones en estructuras bajo tierra",
+      "presión hidrostática en cimientos"
+    ],
+    "no_usar_para": [
+      "losas expuestas",
+      "paredes interiores terminadas",
+      "techos",
+      "uso como sellador de grietas"
+    ],
     "descripcion": "Aditivo mineral que se mezcla con mortero u hormigón. Actúa por hidrofobicidad capilar. No se aplica solo — va mezclado en la masa.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
@@ -108,15 +215,38 @@
     "nombre": "Viaplus 1000",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon subterraneo", "mamposteria en contacto con suelo", "muro de contencion", "cimiento", "piscina enterrada", "cisterna enterrada", "sotano", "pozo de ascensor"],
-    "problema": ["presion hidrostatica positiva y negativa", "filtraciones subterraneas", "humedad en sotano", "impermeabilizacion bajo nivel de suelo", "napa freatica"],
-    "no_usar_para": ["losas expuestas", "techos", "paredes interiores sin presión hidrostática", "reparacion de grietas superficiales", "áreas sin contacto con suelo"],
+    "superficies": [
+      "hormigon subterraneo",
+      "mamposteria en contacto con suelo",
+      "muro de contencion",
+      "cimiento",
+      "piscina enterrada",
+      "cisterna enterrada",
+      "sotano",
+      "pozo de ascensor"
+    ],
+    "problema": [
+      "presion hidrostatica positiva y negativa",
+      "filtraciones subterraneas",
+      "humedad en sotano",
+      "impermeabilizacion bajo nivel de suelo",
+      "napa freatica"
+    ],
+    "no_usar_para": [
+      "losas expuestas",
+      "techos",
+      "paredes interiores sin presión hidrostática",
+      "reparacion de grietas superficiales",
+      "áreas sin contacto con suelo"
+    ],
     "descripcion": "Mortero impermeabilizante semiflexible bicomponente (A+B). Resiste hasta 60m de columna de agua. EXCLUSIVO para estructuras subterráneas o en contacto directo con el suelo.",
     "rendimiento_kg_m2": 3.5,
-    "presentaciones": ["caja 18 kg"],
+    "presentaciones": [
+      "caja 18 kg"
+    ],
     "rendimiento_nota": "3 a 4 kg/m² presión positiva. 4 a 5 kg/m² presión negativa. 3 a 4 manos.",
     "precio": null,
-    "mediaPdf": "2189939724870447",
+    "mediaPdf": "1741470667271903",
     "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-1000"
   },
@@ -126,15 +256,30 @@
     "nombre": "Viaplus 5000",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["cisterna elevada", "deposito de agua potable elevado", "piscina elevada de hormigon"],
-    "problema": ["impermeabilizacion de deposito de agua", "impermeabilizacion de piscina elevada", "presion hidrostatica positiva en estructura elevada"],
-    "no_usar_para": ["presión hidrostática negativa", "estructuras subterráneas", "losas expuestas", "paredes sin presión de agua"],
+    "superficies": [
+      "cisterna elevada",
+      "deposito de agua potable elevado",
+      "piscina elevada de hormigon"
+    ],
+    "problema": [
+      "impermeabilizacion de deposito de agua",
+      "impermeabilizacion de piscina elevada",
+      "presion hidrostatica positiva en estructura elevada"
+    ],
+    "no_usar_para": [
+      "presión hidrostática negativa",
+      "estructuras subterráneas",
+      "losas expuestas",
+      "paredes sin presión de agua"
+    ],
     "descripcion": "Revestimiento impermeabilizante flexible bicomponente. Para depósitos y piscinas elevadas. Solo presión hidrostática positiva. Requiere sistema dual con Viaplus 1000 en enterradas.",
     "rendimiento_kg_m2": 3.5,
-    "presentaciones": ["caja 18 kg"],
+    "presentaciones": [
+      "caja 18 kg"
+    ],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
-    "mediaPdf": "25679745471647881",
+    "mediaPdf": "1002172172550750",
     "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viaplus-5000"
   },
@@ -144,14 +289,25 @@
     "nombre": "Viafix",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon", "mortero", "losa"],
-    "problema": ["mejora de adherencia entre capas de hormigon", "union de hormigon viejo con nuevo", "preparacion de superficie para mortero"],
-    "no_usar_para": ["uso como impermeabilizante final", "sellado de grietas"],
+    "superficies": [
+      "hormigon",
+      "mortero",
+      "losa"
+    ],
+    "problema": [
+      "mejora de adherencia entre capas de hormigon",
+      "union de hormigon viejo con nuevo",
+      "preparacion de superficie para mortero"
+    ],
+    "no_usar_para": [
+      "uso como impermeabilizante final",
+      "sellado de grietas"
+    ],
     "descripcion": "Emulsión adhesiva PVA. Promotor de adhesión. Siempre es un complemento — nunca producto principal.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
-    "mediaPdf": "2261824621013013",
+    "mediaPdf": "1501907484154029",
     "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/viafix"
   },
@@ -161,16 +317,39 @@
     "nombre": "Vedalage Plus",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["losa expuesta", "techo expuesto", "azotea", "marquesina", "techo de fibrocemento", "boveda", "canaleta de hormigon"],
-    "problema": ["filtraciones en losa expuesta", "goteras en techo", "impermeabilizacion de azotea con o sin trafico leve", "renovacion de impermeabilizacion existente"],
-    "no_usar_para": ["estructuras subterráneas", "presión hidrostática", "piscinas", "paredes interiores", "áreas bajo tierra"],
+    "superficies": [
+      "losa expuesta",
+      "techo expuesto",
+      "azotea",
+      "marquesina",
+      "techo de fibrocemento",
+      "boveda",
+      "canaleta de hormigon"
+    ],
+    "problema": [
+      "filtraciones en losa expuesta",
+      "goteras en techo",
+      "impermeabilizacion de azotea con o sin trafico leve",
+      "renovacion de impermeabilizacion existente"
+    ],
+    "no_usar_para": [
+      "estructuras subterráneas",
+      "presión hidrostática",
+      "piscinas",
+      "paredes interiores",
+      "áreas bajo tierra"
+    ],
     "descripcion": "Manta líquida acrílica de alto rendimiento. Refleja rayos solares. Resistente a UV. Lista para usar. IDEAL para losas y techos expuestos.",
-    "rendimiento_kg_m2": 1.0,
-    "presentaciones": ["galón 4 kg", "balde 12 kg", "balde 18 kg"],
+    "rendimiento_kg_m2": 1,
+    "presentaciones": [
+      "galón 4 kg",
+      "balde 12 kg",
+      "balde 18 kg"
+    ],
     "rendimiento_nota": "~1 kg/m² en 4-5 manos. Galón 4kg rinde ~4m².",
     "precio": null,
-    "mediaPdf": "1392306299362780",
-    "mediaVideo": "1927902147833775",
+    "mediaPdf": "1307926511505546",
+    "mediaVideo": "1752763815715469",
     "linkWeb": "https://importadorajv.com/producto/vedalage-plus"
   },
   {
@@ -179,15 +358,32 @@
     "nombre": "Sella Grietas",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["pared interior", "pared exterior", "fachada", "drywall", "marco metalico", "marco de madera"],
-    "problema": ["grietas finas en paredes", "fisuras en fachadas", "grietas en drywall", "fisuras en mortero"],
-    "no_usar_para": ["grietas estructurales grandes", "juntas de dilatacion", "superficies bajo presión hidrostática", "piscinas"],
+    "superficies": [
+      "pared interior",
+      "pared exterior",
+      "fachada",
+      "drywall",
+      "marco metalico",
+      "marco de madera"
+    ],
+    "problema": [
+      "grietas finas en paredes",
+      "fisuras en fachadas",
+      "grietas en drywall",
+      "fisuras en mortero"
+    ],
+    "no_usar_para": [
+      "grietas estructurales grandes",
+      "juntas de dilatacion",
+      "superficies bajo presión hidrostática",
+      "piscinas"
+    ],
     "descripcion": "Sellador monocomponente flexible base acrílica. Para grietas y fisuras superficiales. Acepta pintura a base de agua.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
-    "mediaPdf": "928644689685410",
-    "mediaVideo": "1522493072176120",
+    "mediaPdf": "1005910802351941",
+    "mediaVideo": "1972854370100360",
     "linkWeb": "https://importadorajv.com/producto/sella-grietas"
   },
   {
@@ -196,15 +392,31 @@
     "nombre": "Viaplus Reparo",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["pared interior con humedad", "pared exterior con humedad", "bloque de hormigon", "ceramica", "revoque"],
-    "problema": ["humedad ascendente en paredes", "manchas de humedad en paredes", "eflorescencias", "paredes con salitre"],
-    "no_usar_para": ["losas expuestas", "techos", "estructuras bajo presión hidrostática alta", "piscinas"],
+    "superficies": [
+      "pared interior con humedad",
+      "pared exterior con humedad",
+      "bloque de hormigon",
+      "ceramica",
+      "revoque"
+    ],
+    "problema": [
+      "humedad ascendente en paredes",
+      "manchas de humedad en paredes",
+      "eflorescencias",
+      "paredes con salitre"
+    ],
+    "no_usar_para": [
+      "losas expuestas",
+      "techos",
+      "estructuras bajo presión hidrostática alta",
+      "piscinas"
+    ],
     "descripcion": "Impermeabilizante blanco monocomponente para paredes con humedad. Aplicación directa. Acepta pintura. Color blanco puede usarse como terminación.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
     "precio": null,
-    "mediaPdf": "2469471060151179",
-    "mediaVideo": "2068957583893035",
+    "mediaPdf": "1479055340194696",
+    "mediaVideo": "4485171041706218",
     "linkWeb": "https://importadorajv.com/producto/viaplus-reparo"
   },
   {
@@ -213,12 +425,25 @@
     "nombre": "ViaFoil",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["tejado", "techo inclinado"],
-    "problema": ["filtraciones en tejado", "aislamiento termico de techo", "goteras en techo inclinado"],
-    "no_usar_para": ["losas planas", "paredes", "estructuras subterráneas"],
+    "superficies": [
+      "tejado",
+      "techo inclinado"
+    ],
+    "problema": [
+      "filtraciones en tejado",
+      "aislamiento termico de techo",
+      "goteras en techo inclinado"
+    ],
+    "no_usar_para": [
+      "losas planas",
+      "paredes",
+      "estructuras subterráneas"
+    ],
     "descripcion": "Film de polietileno con recubrimiento reflectante de aluminio. Para tejados inclinados. Aislamiento térmico y barrera impermeable.",
     "rendimiento_m2_por_unidad": null,
-    "presentaciones": ["rollo"],
+    "presentaciones": [
+      "rollo"
+    ],
     "precio": null,
     "mediaPdf": null,
     "mediaVideo": null,
@@ -230,9 +455,26 @@
     "nombre": "Vandex Super",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon estructural", "cisterna", "tunel", "presa", "aparcamiento subterraneo", "planta de tratamiento"],
-    "problema": ["filtraciones en estructuras de hormigon", "impermeabilizacion estructural de alta exigencia", "presion hidrostatica positiva y negativa", "grietas estaticas hasta 0,4mm"],
-    "no_usar_para": ["mampostería de ladrillo", "mortero", "superficies no estructurales", "uso en obra pequeña residencial"],
+    "superficies": [
+      "hormigon estructural",
+      "cisterna",
+      "tunel",
+      "presa",
+      "aparcamiento subterraneo",
+      "planta de tratamiento"
+    ],
+    "problema": [
+      "filtraciones en estructuras de hormigon",
+      "impermeabilizacion estructural de alta exigencia",
+      "presion hidrostatica positiva y negativa",
+      "grietas estaticas hasta 0,4mm"
+    ],
+    "no_usar_para": [
+      "mampostería de ladrillo",
+      "mortero",
+      "superficies no estructurales",
+      "uso en obra pequeña residencial"
+    ],
     "descripcion": "Impermeabilizante cristalizante monocomponente. Se aplica como pintura sobre hormigón. No tóxico (NSF 61). Forma cristales que sellan permanentemente.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
@@ -247,9 +489,25 @@
     "nombre": "Eucorepair Vandex",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon estructural dañado", "junta de hormigon", "agujero de tensor", "pared de hormigon", "fachada de hormigon", "fachada", "pared exterior"],
-    "problema": ["reparacion de hormigon degradado", "sellado de juntas con humedad activa", "reparacion de agujeros de tensores"],
-    "no_usar_para": ["mampostería", "grietas en paredes comunes", "uso como impermeabilizante de área"],
+    "superficies": [
+      "hormigon estructural dañado",
+      "junta de hormigon",
+      "agujero de tensor",
+      "pared de hormigon",
+      "fachada de hormigon",
+      "fachada",
+      "pared exterior"
+    ],
+    "problema": [
+      "reparacion de hormigon degradado",
+      "sellado de juntas con humedad activa",
+      "reparacion de agujeros de tensores"
+    ],
+    "no_usar_para": [
+      "mampostería",
+      "grietas en paredes comunes",
+      "uso como impermeabilizante de área"
+    ],
     "descripcion": "Mortero de reparación con cristalizante incorporado. Espesores 10mm a 125mm. Para reparaciones estructurales puntuales en hormigón.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
@@ -264,9 +522,24 @@
     "nombre": "Eucon Vandex AM-10",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon en masa", "cimiento de hormigon", "tunel", "alcantarillado", "garaje subterraneo"],
-    "problema": ["impermeabilizacion integral del hormigon desde la masa", "presion hidrostatica positiva y negativa", "filtraciones en hormigon estructural"],
-    "no_usar_para": ["mampostería", "mortero de acabado", "paredes de ladrillo", "uso sobre superficie existente"],
+    "superficies": [
+      "hormigon en masa",
+      "cimiento de hormigon",
+      "tunel",
+      "alcantarillado",
+      "garaje subterraneo"
+    ],
+    "problema": [
+      "impermeabilizacion integral del hormigon desde la masa",
+      "presion hidrostatica positiva y negativa",
+      "filtraciones en hormigon estructural"
+    ],
+    "no_usar_para": [
+      "mampostería",
+      "mortero de acabado",
+      "paredes de ladrillo",
+      "uso sobre superficie existente"
+    ],
     "descripcion": "Aditivo cristalizante que se mezcla en el hormigón durante el vaciado. Impermeabiliza desde adentro. Para obra nueva.",
     "rendimiento_kg_m2": null,
     "rendimiento_nota": "Dosificación en seco: agregar con 20-30% de agregados y 60-70% del agua, mezclar 3 min mínimo. Dosificación húmeda: mezclar 20kg en 10L de agua, agregar a la hormigonera con el resto de materiales, mezclar 5-10 min. En mezcladora de obra: agregar con agregados primero, mezclar 5 min, luego agregar cemento y agua.",
@@ -282,14 +555,25 @@
     "nombre": "Mantex",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["cualquier superficie impermeabilizada con manta liquida"],
-    "problema": ["refuerzo estructural de impermeabilizacion liquida", "zonas de alta tension como desagues y esquinas", "prevencion de fisuramiento en juntas"],
-    "no_usar_para": ["uso sin impermeabilizante líquido", "uso solo como barrera de agua"],
+    "superficies": [
+      "cualquier superficie impermeabilizada con manta liquida"
+    ],
+    "problema": [
+      "refuerzo estructural de impermeabilizacion liquida",
+      "zonas de alta tension como desagues y esquinas",
+      "prevencion de fisuramiento en juntas"
+    ],
+    "no_usar_para": [
+      "uso sin impermeabilizante líquido",
+      "uso solo como barrera de agua"
+    ],
     "descripcion": "Tejido 100% poliéster con recubrimiento PVC. Refuerzo que va embebido en la manta líquida — no es impermeabilizante por sí solo.",
     "rendimiento_m2_por_unidad": null,
-    "presentaciones": ["rollo"],
+    "presentaciones": [
+      "rollo"
+    ],
     "precio": null,
-    "mediaPdf": "1464166701812520",
+    "mediaPdf": "1962551324451617",
     "mediaVideo": null,
     "linkWeb": "https://importadorajv.com/producto/mantex"
   },
@@ -299,9 +583,21 @@
     "nombre": "Kiesey",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["mamposteria de ladrillo macizo", "pared de ladrillo con humedad ascendente"],
-    "problema": ["humedad ascendente capilar en paredes de mamposteria", "salitre y eflorescencias en paredes de ladrillo"],
-    "no_usar_para": ["hormigon", "losas", "techos", "grietas estructurales", "presion hidrostatica directa"],
+    "superficies": [
+      "mamposteria de ladrillo macizo",
+      "pared de ladrillo con humedad ascendente"
+    ],
+    "problema": [
+      "humedad ascendente capilar en paredes de mamposteria",
+      "salitre y eflorescencias en paredes de ladrillo"
+    ],
+    "no_usar_para": [
+      "hormigon",
+      "losas",
+      "techos",
+      "grietas estructurales",
+      "presion hidrostatica directa"
+    ],
     "descripcion": "Impermeabilizante cristalizante líquido para bloquear humedad ascendente en mampostería de ladrillo. Reacciona con los componentes del ladrillo.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
@@ -316,9 +612,19 @@
     "nombre": "Po 2",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon con agua activa", "junta con chorro de agua"],
-    "problema": ["taponamiento urgente de chorro de agua activo", "sellado de filtracion activa bajo presion"],
-    "no_usar_para": ["impermeabilizacion preventiva", "superficies secas", "uso como sellador de grietas sin agua activa"],
+    "superficies": [
+      "hormigon con agua activa",
+      "junta con chorro de agua"
+    ],
+    "problema": [
+      "taponamiento urgente de chorro de agua activo",
+      "sellado de filtracion activa bajo presion"
+    ],
+    "no_usar_para": [
+      "impermeabilizacion preventiva",
+      "superficies secas",
+      "uso como sellador de grietas sin agua activa"
+    ],
     "descripcion": "Cemento ultrarrápido. Fragua en 7-10 segundos, endurece en 90 segundos. Solo para emergencias con agua activa. Es el paso previo — luego se aplica Viaplus 1000 o similar.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
@@ -333,9 +639,19 @@
     "nombre": "Viamix Expande Massa",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["mortero", "hormigon en masa"],
-    "problema": ["retraccion de mortero al secar", "prevenir fisuramiento por retraccion", "relleno de cavidades y grietas con mortero"],
-    "no_usar_para": ["uso como impermeabilizante de superficie", "aplicacion directa sin mezcla con cemento"],
+    "superficies": [
+      "mortero",
+      "hormigon en masa"
+    ],
+    "problema": [
+      "retraccion de mortero al secar",
+      "prevenir fisuramiento por retraccion",
+      "relleno de cavidades y grietas con mortero"
+    ],
+    "no_usar_para": [
+      "uso como impermeabilizante de superficie",
+      "aplicacion directa sin mezcla con cemento"
+    ],
     "descripcion": "Aditivo en polvo expansivo. Va mezclado en el mortero u hormigón. Compensa la retracción natural al secar.",
     "rendimiento_kg_m2": null,
     "presentaciones": null,
@@ -350,12 +666,35 @@
     "nombre": "Viaplus 7000",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon", "mamposteria", "drywall", "baño", "cocina", "lavanderia", "balcon", "terraza", "piscina elevada", "cisterna elevada", "tanque de agua elevado"],
-    "problema": ["impermeabilizacion de areas humedas interiores", "impermeabilizacion de piscina elevada", "presion hidrostatica positiva", "proteccion en zonas con movimiento estructural"],
-    "no_usar_para": ["presion hidrostatica negativa", "estructuras bajo tierra", "losas expuestas a la intemperie sin proteccion"],
+    "superficies": [
+      "hormigon",
+      "mamposteria",
+      "drywall",
+      "baño",
+      "cocina",
+      "lavanderia",
+      "balcon",
+      "terraza",
+      "piscina elevada",
+      "cisterna elevada",
+      "tanque de agua elevado"
+    ],
+    "problema": [
+      "impermeabilizacion de areas humedas interiores",
+      "impermeabilizacion de piscina elevada",
+      "presion hidrostatica positiva",
+      "proteccion en zonas con movimiento estructural"
+    ],
+    "no_usar_para": [
+      "presion hidrostatica negativa",
+      "estructuras bajo tierra",
+      "losas expuestas a la intemperie sin proteccion"
+    ],
     "descripcion": "Revestimiento impermeabilizante flexible bicomponente con máximo contenido de fibras. No requiere malla Mantex. Para presión positiva únicamente.",
     "rendimiento_kg_m2": 3.5,
-    "presentaciones": ["caja 18 kg"],
+    "presentaciones": [
+      "caja 18 kg"
+    ],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
     "mediaPdf": null,
@@ -368,12 +707,28 @@
     "nombre": "Sella Juntas PU 25",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["junta de dilatacion en piso", "junta perimetral en fachada", "marco metalico", "marco de madera", "canaleta"],
-    "problema": ["filtraciones en juntas de movimiento", "sellado de juntas entre materiales distintos", "grietas dinamicas con movimiento"],
-    "no_usar_para": ["grietas estructurales anchas", "superficies bajo presión hidrostática directa", "uso sobre superficies húmedas sin preparación"],
+    "superficies": [
+      "junta de dilatacion en piso",
+      "junta perimetral en fachada",
+      "marco metalico",
+      "marco de madera",
+      "canaleta"
+    ],
+    "problema": [
+      "filtraciones en juntas de movimiento",
+      "sellado de juntas entre materiales distintos",
+      "grietas dinamicas con movimiento"
+    ],
+    "no_usar_para": [
+      "grietas estructurales anchas",
+      "superficies bajo presión hidrostática directa",
+      "uso sobre superficies húmedas sin preparación"
+    ],
     "descripcion": "Sellador de poliuretano monocomponente PU 25 PLUS. Alta capacidad de movimiento. Para juntas que se mueven — no para grietas estáticas.",
     "rendimiento_m2_por_unidad": null,
-    "presentaciones": ["sachet 600ml"],
+    "presentaciones": [
+      "sachet 600ml"
+    ],
     "rendimiento_nota": "Rinde 16,6m para junta de 6x6mm.",
     "precio": null,
     "mediaPdf": null,
@@ -386,12 +741,31 @@
     "nombre": "Viaplus 2000 Fibras",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon subterraneo", "mamposteria en contacto con suelo", "muro de contencion", "cimiento", "piscina enterrada", "cisterna enterrada", "sotano"],
-    "problema": ["presion hidrostatica positiva y negativa", "filtraciones subterraneas con riesgo de fisuramiento", "impermeabilizacion bajo nivel de suelo con mayor resistencia que Viaplus 1000"],
-    "no_usar_para": ["losas expuestas", "techos", "paredes interiores sin presión", "áreas elevadas"],
+    "superficies": [
+      "hormigon subterraneo",
+      "mamposteria en contacto con suelo",
+      "muro de contencion",
+      "cimiento",
+      "piscina enterrada",
+      "cisterna enterrada",
+      "sotano"
+    ],
+    "problema": [
+      "presion hidrostatica positiva y negativa",
+      "filtraciones subterraneas con riesgo de fisuramiento",
+      "impermeabilizacion bajo nivel de suelo con mayor resistencia que Viaplus 1000"
+    ],
+    "no_usar_para": [
+      "losas expuestas",
+      "techos",
+      "paredes interiores sin presión",
+      "áreas elevadas"
+    ],
     "descripcion": "Similar al Viaplus 1000 pero con fibras sintéticas adicionales para mayor resistencia al fisuramiento. Para estructuras subterráneas exigentes.",
-    "rendimiento_kg_m2": 4.0,
-    "presentaciones": ["caja 18 kg"],
+    "rendimiento_kg_m2": 4,
+    "presentaciones": [
+      "caja 18 kg"
+    ],
     "rendimiento_nota": "3 a 5 kg/m².",
     "precio": null,
     "mediaPdf": null,
@@ -404,12 +778,26 @@
     "nombre": "Viaplus 6000 Fibras",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["piscina elevada de hormigon", "cisterna elevada", "reservorio elevado", "losa con tráfico"],
-    "problema": ["impermeabilizacion de piscina elevada con mayor resistencia", "presion hidrostatica positiva con riesgo de fisuramiento"],
-    "no_usar_para": ["presion hidrostatica negativa", "estructuras enterradas", "losas sin presión de agua"],
+    "superficies": [
+      "piscina elevada de hormigon",
+      "cisterna elevada",
+      "reservorio elevado",
+      "losa con tráfico"
+    ],
+    "problema": [
+      "impermeabilizacion de piscina elevada con mayor resistencia",
+      "presion hidrostatica positiva con riesgo de fisuramiento"
+    ],
+    "no_usar_para": [
+      "presion hidrostatica negativa",
+      "estructuras enterradas",
+      "losas sin presión de agua"
+    ],
     "descripcion": "Revestimiento flexible bicomponente con alto contenido de fibras. Solo presión positiva. Versión reforzada del Viaplus 5000.",
     "rendimiento_kg_m2": 3.75,
-    "presentaciones": ["caja 18 kg"],
+    "presentaciones": [
+      "caja 18 kg"
+    ],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
     "mediaPdf": null,
@@ -422,12 +810,27 @@
     "nombre": "Viaplus 10.000 Lozas",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["losa expuesta a la intemperie", "azotea con trafico peatonal", "terraza expuesta"],
-    "problema": ["filtraciones en losa expuesta con trafico", "impermeabilizacion de azotea transitable", "proteccion UV en losa"],
-    "no_usar_para": ["estructuras subterráneas", "piscinas", "paredes", "techos inclinados"],
+    "superficies": [
+      "losa expuesta a la intemperie",
+      "azotea con trafico peatonal",
+      "terraza expuesta"
+    ],
+    "problema": [
+      "filtraciones en losa expuesta con trafico",
+      "impermeabilizacion de azotea transitable",
+      "proteccion UV en losa"
+    ],
+    "no_usar_para": [
+      "estructuras subterráneas",
+      "piscinas",
+      "paredes",
+      "techos inclinados"
+    ],
     "descripcion": "Revestimiento ultra elástico bicomponente con protección UV incorporada. Específico para losas expuestas transitables.",
     "rendimiento_kg_m2": 3.75,
-    "presentaciones": ["caja 18 kg"],
+    "presentaciones": [
+      "caja 18 kg"
+    ],
     "rendimiento_nota": "3 a 4,5 kg/m².",
     "precio": null,
     "mediaPdf": null,
@@ -440,12 +843,25 @@
     "nombre": "Dymonic 100",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon fresco o humedo", "junta entre prefabricados", "junta en fachada de hormigon"],
-    "problema": ["sellado de juntas en hormigon con humedad activa", "juntas de alta movilidad en fachadas de hormigon"],
-    "no_usar_para": ["grietas estáticas", "superficies secas comunes", "uso residencial general"],
+    "superficies": [
+      "hormigon fresco o humedo",
+      "junta entre prefabricados",
+      "junta en fachada de hormigon"
+    ],
+    "problema": [
+      "sellado de juntas en hormigon con humedad activa",
+      "juntas de alta movilidad en fachadas de hormigon"
+    ],
+    "no_usar_para": [
+      "grietas estáticas",
+      "superficies secas comunes",
+      "uso residencial general"
+    ],
     "descripcion": "Sellador de poliuretano de alto desempeño. Única ventaja vs Sella Juntas: adhiere a hormigón húmedo o verde (fresco). Para obra civil.",
     "rendimiento_m2_por_unidad": null,
-    "presentaciones": ["sachet 600ml"],
+    "presentaciones": [
+      "sachet 600ml"
+    ],
     "rendimiento_nota": "16,6m para junta de 6x6mm.",
     "precio": null,
     "mediaPdf": null,
@@ -458,12 +874,23 @@
     "nombre": "Plastol",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon en masa"],
-    "problema": ["mejorar fluidez del hormigon sin agregar agua", "reducir consumo de cemento manteniendo resistencia"],
-    "no_usar_para": ["uso en superficie", "sellado de grietas", "impermeabilizacion de área"],
+    "superficies": [
+      "hormigon en masa"
+    ],
+    "problema": [
+      "mejorar fluidez del hormigon sin agregar agua",
+      "reducir consumo de cemento manteniendo resistencia"
+    ],
+    "no_usar_para": [
+      "uso en superficie",
+      "sellado de grietas",
+      "impermeabilizacion de área"
+    ],
     "descripcion": "Aditivo superplastificante de fraguado normal. Va en la mezcla de hormigón. No es impermeabilizante de superficie.",
     "rendimiento_kg_m2": null,
-    "presentaciones": ["tambor 200 L"],
+    "presentaciones": [
+      "tambor 200 L"
+    ],
     "rendimiento_nota": "0,1% a 1,5% del peso del cemento.",
     "precio": null,
     "mediaPdf": null,
@@ -476,12 +903,23 @@
     "nombre": "Plastoflow",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["hormigon en masa para transporte o bombeo prolongado"],
-    "problema": ["mantener trabajabilidad del hormigon en transportes largos", "hormigon bombeado a gran distancia"],
-    "no_usar_para": ["uso en superficie", "obra pequeña", "impermeabilizacion de área"],
+    "superficies": [
+      "hormigon en masa para transporte o bombeo prolongado"
+    ],
+    "problema": [
+      "mantener trabajabilidad del hormigon en transportes largos",
+      "hormigon bombeado a gran distancia"
+    ],
+    "no_usar_para": [
+      "uso en superficie",
+      "obra pequeña",
+      "impermeabilizacion de área"
+    ],
     "descripcion": "Aditivo superplastificante de larga manutención. Similar al Plastol pero mantiene la fluidez por más tiempo. Para hormigón bombeado.",
     "rendimiento_kg_m2": null,
-    "presentaciones": ["tambor 200 L"],
+    "presentaciones": [
+      "tambor 200 L"
+    ],
     "rendimiento_nota": "0,2% a 1,8% del peso del cemento.",
     "precio": null,
     "mediaPdf": null,
@@ -494,12 +932,26 @@
     "nombre": "Viabit Acqua Antiraiz",
     "marca": "Viapol",
     "categoria": "impermeabilizante",
-    "superficies": ["losa sobre jardinera", "losa con riesgo de penetracion de raices", "techo verde"],
-    "problema": ["impermeabilizacion con proteccion anti-raices", "filtraciones en losas sobre jardineras o areas con vegetacion"],
-    "no_usar_para": ["losas sin riesgo de raices", "estructuras subterráneas", "piscinas"],
+    "superficies": [
+      "losa sobre jardinera",
+      "losa con riesgo de penetracion de raices",
+      "techo verde"
+    ],
+    "problema": [
+      "impermeabilizacion con proteccion anti-raices",
+      "filtraciones en losas sobre jardineras o areas con vegetacion"
+    ],
+    "no_usar_para": [
+      "losas sin riesgo de raices",
+      "estructuras subterráneas",
+      "piscinas"
+    ],
     "descripcion": "Pintura impermeabilizante base agua con aditivo que inhibe penetración de raíces. Para losas con vegetación encima.",
     "rendimiento_kg_m2": 2.5,
-    "presentaciones": ["galón 3,6 kg", "balde 18 kg"],
+    "presentaciones": [
+      "galón 3,6 kg",
+      "balde 18 kg"
+    ],
     "rendimiento_nota": "0,4 l/m².",
     "precio": null,
     "mediaPdf": null,
